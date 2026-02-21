@@ -1,0 +1,6 @@
+{
+  "libraries": ["./app/slices"],
+  "repositoryName": "lumina-consulting",
+  "adapter": "@slicemachine/adapter-nuxt",
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
+}
