@@ -1,0 +1,114 @@
+{
+  "format": "custom",
+  "id": "settings",
+  "label": "Settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "site_title": {
+        "type": "Text",
+        "config": {
+          "label": "Site Title",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {
+            "width": 2400,
+            "height": 1260
+          },
+          "thumbnails": []
+        }
+      },
+      "navigation": {
+        "type": "Link",
+        "config": {
+          "label": "Navigation",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": true
+        }
+      },
+      "navigation_cta": {
+        "type": "Link",
+        "config": {
+          "label": "Navigation CTA",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      }
+    },
+    "Footer": {
+      "footer_primary_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Footer Primary Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading3,strong,em,hyperlink,list-item"
+        }
+      },
+      "footer_navigation": {
+        "type": "Link",
+        "config": {
+          "label": "Footer Navigation",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": true
+        }
+      },
+      "footer_social_links": {
+        "type": "Group",
+        "config": {
+          "label": "Footer Social Links",
+          "repeat": true,
+          "fields": {
+            "icon": {
+              "type": "Select",
+              "config": {
+                "label": "Icon",
+                "placeholder": "",
+                "options": [
+                  "email",
+                  "linkedin",
+                  "twitter",
+                  "instagram",
+                  "website"
+                ]
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": false,
+                "repeat": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ import "./shared/lib/env";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: "2026-01-02",
   devtools: { enabled: true },
 
   app: {
@@ -52,5 +53,8 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: "2026-01-02",
+  colorMode: {
+    preference: "light",
+    fallback: "light",
+  },
 });
