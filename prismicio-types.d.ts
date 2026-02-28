@@ -69,7 +69,7 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type PageDocumentDataSlicesSlice = RichTextSlice;
+type PageDocumentDataSlicesSlice = ExpertiseSlice | RichTextSlice;
 
 /**
  * Content for Page documents
@@ -279,6 +279,124 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument | SettingsDocument;
 
 /**
+ * Item in *Expertise → Default → Primary → Items*
+ */
+export interface ExpertiseSliceDefaultPrimaryItemsItem {
+  /**
+   * Icon field in *Expertise → Default → Primary → Items*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: expertise.default.primary.items[].icon
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  icon: prismic.SelectField<
+    | "pen_tool"
+    | "terminal"
+    | "rocket"
+    | "bar_chart"
+    | "users"
+    | "lightbulb"
+    | "target"
+  >;
+
+  /**
+   * Title field in *Expertise → Default → Primary → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: expertise.default.primary.items[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *Expertise → Default → Primary → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: expertise.default.primary.items[].description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Expertise → Default → Primary*
+ */
+export interface ExpertiseSliceDefaultPrimary {
+  /**
+   * Label field in *Expertise → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: expertise.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Expertise → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: expertise.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Description field in *Expertise → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: expertise.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Items field in *Expertise → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: expertise.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  items: prismic.GroupField<Simplify<ExpertiseSliceDefaultPrimaryItemsItem>>;
+}
+
+/**
+ * Default variation for Expertise Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ExpertiseSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ExpertiseSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Expertise*
+ */
+type ExpertiseSliceVariation = ExpertiseSliceDefault;
+
+/**
+ * Expertise Shared Slice
+ *
+ * - **API ID**: `expertise`
+ * - **Description**: Expertise
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ExpertiseSlice = prismic.SharedSlice<
+  "expertise",
+  ExpertiseSliceVariation
+>;
+
+/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
@@ -399,6 +517,11 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocumentDataFooterSocialLinksItem,
       AllDocumentTypes,
+      ExpertiseSlice,
+      ExpertiseSliceDefaultPrimaryItemsItem,
+      ExpertiseSliceDefaultPrimary,
+      ExpertiseSliceVariation,
+      ExpertiseSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,

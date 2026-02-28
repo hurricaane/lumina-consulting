@@ -1,0 +1,158 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "label": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Notre Expertise"
+      },
+      "heading": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "L'artisanat au service de votre performance",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Trois piliers fondamentaux pour construire votre présence en ligne avec précision et élégance.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "items": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "icon",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Select",
+                  "value": "pen_tool"
+                }
+              ],
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Conception & Design"
+                }
+              ],
+              [
+                "description",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "L'esthétique au service de l'expérience utilisateur. Nous créons des interfaces intuitives et élégantes qui renforcent votre identité de marque.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "icon",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Select",
+                  "value": "terminal"
+                }
+              ],
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Développement Moderne"
+                }
+              ],
+              [
+                "description",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Des technologies de pointe pour une performance durable. Code propre, optimisé pour le SEO et l'accessibilité universelle.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ]
+            ],
+            "key": "58fdf571-e1e7-4c9d-b008-ccf8d9318c30"
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "icon",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Select",
+                  "value": "rocket"
+                }
+              ],
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Lancement & Suivi"
+                }
+              ],
+              [
+                "description",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Un accompagnement continu après le lancement. Nous assurons la pérennité de votre outil digital avec une maintenance proactive et des évolutions stratégiques.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ]
+            ],
+            "key": "851f9168-0d9d-4a2b-b532-76ed356dce55"
+          }
+        ]
+      }
+    },
+    "items": []
+  }
+]

@@ -34,25 +34,24 @@ const ctaLabel = computed(() => props.settings?.data.navigation_cta.text || "CTA
 const ctaLink = computed(() => asLink(props.settings?.data.navigation_cta));
 
 const starVariants: MotionProps["variants"] = {
-  rest: { rotate: 0 },
-  hover: { rotate: 180 },
-};
-
-const textVariants: MotionProps["variants"] = {
   rest: {
-    x: -30,
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-    },
+    rotate: 0,
+    transition: { type: "spring", stiffness: 300, damping: 20 },
   },
   hover: {
-    x: -5,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
+    rotate: 72,
+    transition: { type: "spring", stiffness: 400, damping: 18 },
+  },
+};
+
+const lineVariants: MotionProps["variants"] = {
+  rest: {
+    scaleX: 0,
+    transition: { duration: 0.18, ease: "easeIn" },
+  },
+  hover: {
+    scaleX: 1,
+    transition: { duration: 0.5, delay: 0.06, ease: [0.16, 1, 0.3, 1] },
   },
 };
 </script>
@@ -78,17 +77,19 @@ const textVariants: MotionProps["variants"] = {
           >
             ✦
           </motion.span>
-          <span
-            class="font-display text-[1.125rem] font-medium tracking-tight text-lumina-deep group-hover:text-primary transition-colors duration-300"
-          >
-            Lumina
-          </span>
-          <motion.span
-            :variants="textVariants"
-            class="font-display text-[1.125rem] font-medium tracking-tight text-primary"
-          >
-            Consulting
-          </motion.span>
+
+          <div class="relative inline-flex items-baseline gap-[0.2em]">
+            <span class="font-display text-[1.125rem] font-medium tracking-tight text-lumina-deep">
+              Lumina
+            </span>
+            <span class="font-display text-[1.125rem] font-medium tracking-tight text-lumina-deep/50 group-hover:text-primary transition-colors duration-500">
+              Consulting
+            </span>
+            <motion.div
+              :variants="lineVariants"
+              class="absolute inset-x-0 bottom-[-2px] h-px bg-primary origin-left"
+            />
+          </div>
         </motion.div>
       </template>
 
