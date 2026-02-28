@@ -1,0 +1,84 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "badge": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Artisan Digital"
+      },
+      "text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Une approche artisanale, humaine et sur-mesure pour donner vie à vos ambitions digitales. Le web haute couture au service de votre excellence.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "cta": {
+        "__TYPE__": "RepeatableContent",
+        "type": "Link",
+        "value": [
+          {
+            "key": "e1897821-e54c-4aeb-83e1-01af1f84b7c8",
+            "__TYPE__": "LinkContent",
+            "value": {
+              "__TYPE__": "ExternalLink",
+              "url": "/#",
+              "text": "Découvrir notre approche",
+              "variant": "Solid"
+            }
+          },
+          {
+            "key": "b455ab86-8cdb-4641-8db3-5d6de405049d",
+            "__TYPE__": "LinkContent",
+            "value": {
+              "__TYPE__": "ExternalLink",
+              "url": "/#",
+              "text": "Nos Réalisations",
+              "variant": "Outlined"
+            }
+          }
+        ]
+      },
+      "title_first_line": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "De votre vision à la",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "title_second_line": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "réalité numérique",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]
