@@ -22,6 +22,7 @@ const ease: Easing = [0.16, 1, 0.3, 1];
 
 <template>
   <section
+    id="expertises"
     :data-slice-type="slice.slice_type"
     :data-slice-variation="slice.variation"
     class="py-[clamp(5rem,10vw,8rem)] bg-background"

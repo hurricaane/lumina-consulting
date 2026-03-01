@@ -3,6 +3,8 @@ import { asImageSrc } from "@prismicio/client";
 
 import { components } from "~/slices";
 
+useActiveSections(["expertises"]);
+
 const { client } = usePrismic();
 const { data: page } = await useAsyncData(
   "index",

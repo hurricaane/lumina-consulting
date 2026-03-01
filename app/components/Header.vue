@@ -11,6 +11,17 @@ const props = defineProps<{
 }>();
 
 const route = useRoute();
+const activeSection = useState<string>("activeSection", () => "");
+
+const isScrolled = ref(false);
+onMounted(() => {
+  const onScroll = () => {
+    isScrolled.value = window.scrollY > 24;
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onUnmounted(() => window.removeEventListener("scroll", onScroll));
+});
+
 const navigationItems = computed<NavigationMenuItem[]>(() => {
   const nav = props.settings?.data.navigation;
   if (!nav)
@@ -21,7 +32,7 @@ const navigationItems = computed<NavigationMenuItem[]>(() => {
     .map(item => ({
       label: item.text || "Link",
       to: asLink(item) || "#",
-      active: route.path === asLink(item),
+      active: activeSection.value ? `#${activeSection.value}` === asLink(item) : route.path === asLink(item),
       ...(
         "target" in item && item.target
           ? { target: item.target }
@@ -63,7 +74,15 @@ const lineVariants: MotionProps["variants"] = {
     :animate="{ y: 0 }"
     :transition="{ duration: 0.6 }"
   >
-    <UHeader mode="slideover">
+    <UHeader
+      mode="slideover"
+      class="transition-shadow duration-500"
+      :class="[
+        isScrolled
+          ? 'shadow-[0_1px_0_oklch(0.25_0.03_240/0.06),0_4px_24px_oklch(0.25_0.03_240/0.07)]'
+          : '',
+      ]"
+    >
       <template #title>
         <motion.div
           initial="rest"
@@ -82,13 +101,12 @@ const lineVariants: MotionProps["variants"] = {
             <span class="font-display text-[1.125rem] font-medium tracking-tight text-lumina-deep">
               Lumina
             </span>
-            <span class="font-display text-[1.125rem] font-medium tracking-tight text-lumina-deep/50 group-hover:text-primary transition-colors duration-500">
+            <span
+              class="font-display text-[1.125rem] font-medium tracking-tight text-lumina-deep/50 group-hover:text-primary transition-colors duration-500"
+            >
               Consulting
             </span>
-            <motion.div
-              :variants="lineVariants"
-              class="absolute inset-x-0 bottom-[-2px] h-px bg-primary origin-left"
-            />
+            <motion.div :variants="lineVariants" class="absolute inset-x-0 -bottom-0.5 h-px bg-primary origin-left" />
           </div>
         </motion.div>
       </template>
