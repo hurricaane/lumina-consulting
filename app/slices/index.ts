@@ -5,5 +5,7 @@ import { defineAsyncComponent } from "vue";
 
 export const components = defineSliceZoneComponents({
   expertise: defineAsyncComponent(() => import("./Expertise/index.vue")),
+  methodologie: defineAsyncComponent(() => import("./Methodologie/index.vue")),
+  realisations: defineAsyncComponent(() => import("./Realisations/index.vue")),
   rich_text: defineAsyncComponent(() => import("./Hero/index.vue")),
 });

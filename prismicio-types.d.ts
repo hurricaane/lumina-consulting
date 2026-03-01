@@ -69,7 +69,11 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type PageDocumentDataSlicesSlice = ExpertiseSlice | RichTextSlice;
+type PageDocumentDataSlicesSlice =
+  | RealisationsSlice
+  | MethodologieSlice
+  | ExpertiseSlice
+  | RichTextSlice;
 
 /**
  * Content for Page documents
@@ -84,7 +88,7 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>; /**
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
    * Meta Title field in *Page*
    *
    * - **Field Type**: Text
@@ -92,7 +96,7 @@ interface PageDocumentData {
    * - **API ID Path**: page.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
-   */
+   */;
   meta_title: prismic.KeyTextField;
 
   /**
@@ -222,7 +226,7 @@ interface SettingsDocumentData {
     unknown,
     prismic.FieldState,
     never
-  >; /**
+  > /**
    * Footer Primary Text field in *Settings*
    *
    * - **Field Type**: Rich Text
@@ -230,7 +234,7 @@ interface SettingsDocumentData {
    * - **API ID Path**: settings.footer_primary_text
    * - **Tab**: Footer
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
+   */;
   footer_primary_text: prismic.RichTextField;
 
   /**
@@ -397,6 +401,250 @@ export type ExpertiseSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Methodologie → Default → Primary → Items*
+ */
+export interface MethodologieSliceDefaultPrimaryItemsItem {
+  /**
+   * Icon field in *Methodologie → Default → Primary → Items*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: methodologie.default.primary.items[].icon
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  icon: prismic.SelectField<
+    | "users"
+    | "pen_tool"
+    | "gem"
+    | "rocket"
+    | "lightbulb"
+    | "target"
+    | "message_circle"
+  >;
+
+  /**
+   * Title field in *Methodologie → Default → Primary → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: methodologie.default.primary.items[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *Methodologie → Default → Primary → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: methodologie.default.primary.items[].description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Methodologie → Default → Primary*
+ */
+export interface MethodologieSliceDefaultPrimary {
+  /**
+   * Label field in *Methodologie → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: methodologie.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Methodologie → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: methodologie.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Items field in *Methodologie → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: methodologie.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  items: prismic.GroupField<Simplify<MethodologieSliceDefaultPrimaryItemsItem>>;
+}
+
+/**
+ * Default variation for Methodologie Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MethodologieSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MethodologieSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Methodologie*
+ */
+type MethodologieSliceVariation = MethodologieSliceDefault;
+
+/**
+ * Methodologie Shared Slice
+ *
+ * - **API ID**: `methodologie`
+ * - **Description**: Methodologie
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MethodologieSlice = prismic.SharedSlice<
+  "methodologie",
+  MethodologieSliceVariation
+>;
+
+/**
+ * Item in *Realisations → Default → Primary → Items*
+ */
+export interface RealisationsSliceDefaultPrimaryItemsItem {
+  /**
+   * Image field in *Realisations → Default → Primary → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realisations.default.primary.items[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Category field in *Realisations → Default → Primary → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realisations.default.primary.items[].category
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  category: prismic.KeyTextField;
+
+  /**
+   * Title field in *Realisations → Default → Primary → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realisations.default.primary.items[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *Realisations → Default → Primary → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realisations.default.primary.items[].description
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Link field in *Realisations → Default → Primary → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realisations.default.primary.items[].link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Primary content in *Realisations → Default → Primary*
+ */
+export interface RealisationsSliceDefaultPrimary {
+  /**
+   * Label field in *Realisations → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realisations.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Realisations → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realisations.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * CTA Link field in *Realisations → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realisations.default.primary.cta_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  cta_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Items field in *Realisations → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realisations.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  items: prismic.GroupField<Simplify<RealisationsSliceDefaultPrimaryItemsItem>>;
+}
+
+/**
+ * Default variation for Realisations Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RealisationsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<RealisationsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Realisations*
+ */
+type RealisationsSliceVariation = RealisationsSliceDefault;
+
+/**
+ * Realisations Shared Slice
+ *
+ * - **API ID**: `realisations`
+ * - **Description**: Realisations
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RealisationsSlice = prismic.SharedSlice<
+  "realisations",
+  RealisationsSliceVariation
+>;
+
+/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
@@ -522,6 +770,16 @@ declare module "@prismicio/client" {
       ExpertiseSliceDefaultPrimary,
       ExpertiseSliceVariation,
       ExpertiseSliceDefault,
+      MethodologieSlice,
+      MethodologieSliceDefaultPrimaryItemsItem,
+      MethodologieSliceDefaultPrimary,
+      MethodologieSliceVariation,
+      MethodologieSliceDefault,
+      RealisationsSlice,
+      RealisationsSliceDefaultPrimaryItemsItem,
+      RealisationsSliceDefaultPrimary,
+      RealisationsSliceVariation,
+      RealisationsSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,

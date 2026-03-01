@@ -18,6 +18,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "realisations": {
+              "type": "SharedSlice"
+            },
+            "methodologie": {
+              "type": "SharedSlice"
+            },
             "expertise": {
               "type": "SharedSlice"
             },

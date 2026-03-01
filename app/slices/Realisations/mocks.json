@@ -1,0 +1,240 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "label": {
+        "__TYPE__": "FieldContent",
+        "value": "NOS RÉALISATIONS",
+        "type": "Text"
+      },
+      "heading": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Du rêve au pixel."
+            }
+          }
+        ]
+      },
+      "cta_link": {
+        "key": "3b16e98e-6ff7-4e91-b335-654f17064660",
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://localhost:3000",
+          "text": "Voir tous les projets"
+        }
+      },
+      "items": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "a1234567-89ab-4def-8012-123456789abc",
+            "value": [
+              [
+                "image",
+                {
+                  "origin": {
+                    "id": "main",
+                    "url": "https://images.unsplash.com/photo-1519741497674-611481863552",
+                    "width": 1200,
+                    "height": 800
+                  },
+                  "url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=800&fit=crop",
+                  "width": 1200,
+                  "height": 800,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  },
+                  "alt": "Mariage Dubois",
+                  "credits": null,
+                  "__TYPE__": "ImageContent",
+                  "thumbnails": {}
+                }
+              ],
+              [
+                "category",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Mariage",
+                  "type": "Text"
+                }
+              ],
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Mariage Dubois",
+                  "type": "Text"
+                }
+              ],
+              [
+                "description",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Site de mariage élégant",
+                  "type": "Text"
+                }
+              ],
+              [
+                "link",
+                {
+                  "key": "c83b6428-c5a0-4c5b-bdc3-2f418c98083d",
+                  "__TYPE__": "LinkContent",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "http://localhost:3000"
+                  }
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "fe2f30c5-9689-4405-a433-0512af78b8f7",
+            "value": [
+              [
+                "image",
+                {
+                  "origin": {
+                    "id": "main",
+                    "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+                    "width": 1200,
+                    "height": 800
+                  },
+                  "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=800&fit=crop",
+                  "width": 1200,
+                  "height": 800,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  },
+                  "alt": "Le Jardin restaurant",
+                  "credits": null,
+                  "__TYPE__": "ImageContent",
+                  "thumbnails": {}
+                }
+              ],
+              [
+                "category",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Restaurant",
+                  "type": "Text"
+                }
+              ],
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Le Jardin",
+                  "type": "Text"
+                }
+              ],
+              [
+                "description",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Identité & réservation en ligne",
+                  "type": "Text"
+                }
+              ],
+              [
+                "link",
+                {
+                  "key": "a8489fb2-8c69-4644-bc80-9bf15718942e",
+                  "__TYPE__": "LinkContent",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "http://localhost:3000"
+                  }
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "ac7a0d2c-bc82-4d9e-bb17-9dafbf3bc6e1",
+            "value": [
+              [
+                "image",
+                {
+                  "origin": {
+                    "id": "main",
+                    "url": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
+                    "width": 1200,
+                    "height": 800
+                  },
+                  "url": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&h=800&fit=crop",
+                  "width": 1200,
+                  "height": 800,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  },
+                  "alt": "Association Horizon",
+                  "credits": null,
+                  "__TYPE__": "ImageContent",
+                  "thumbnails": {}
+                }
+              ],
+              [
+                "category",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Association",
+                  "type": "Text"
+                }
+              ],
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Association Horizon",
+                  "type": "Text"
+                }
+              ],
+              [
+                "description",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Présence web engagée et accessible",
+                  "type": "Text"
+                }
+              ],
+              [
+                "link",
+                {
+                  "key": "f1234567-89ab-4cde-b012-123456789abc",
+                  "__TYPE__": "LinkContent",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "http://localhost:3000"
+                  }
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "items": []
+  }
+]

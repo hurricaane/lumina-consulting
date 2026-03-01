@@ -25,7 +25,7 @@ const ease: Easing = [0.16, 1, 0.3, 1];
     id="expertises"
     :data-slice-type="slice.slice_type"
     :data-slice-variation="slice.variation"
-    class="py-[clamp(5rem,10vw,8rem)] bg-background"
+    class="py-[clamp(5rem,10vw,8rem)] bg-[linear-gradient(to_bottom,var(--color-background)_0%,var(--color-lumina-50)_25%,var(--color-lumina-50)_75%,var(--color-background)_100%)]"
   >
     <UContainer>
       <!-- ─── Header ──────────────────────────────────────────── -->

@@ -11,7 +11,7 @@ const props = defineProps<{
 }>();
 
 const route = useRoute();
-const activeSection = useState<string>("activeSection", () => "");
+const activeSection = useState<string | null>("activeSection", () => null);
 
 const isScrolled = ref(false);
 onMounted(() => {
@@ -21,6 +21,11 @@ onMounted(() => {
   window.addEventListener("scroll", onScroll, { passive: true });
   onUnmounted(() => window.removeEventListener("scroll", onScroll));
 });
+
+function scrollToTop() {
+  activeSection.value = null;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
 const navigationItems = computed<NavigationMenuItem[]>(() => {
   const nav = props.settings?.data.navigation;
@@ -32,7 +37,9 @@ const navigationItems = computed<NavigationMenuItem[]>(() => {
     .map(item => ({
       label: item.text || "Link",
       to: asLink(item) || "#",
-      active: activeSection.value ? `#${activeSection.value}` === asLink(item) : route.path === asLink(item),
+      active: activeSection.value !== null ? `#${activeSection.value}` === asLink(item) : route.path === asLink(item),
+      // Home link (to="/") is a no-op when already on "/" — force scroll to top instead
+      ...(asLink(item) === "/" ? { onSelect: scrollToTop } : {}),
       ...(
         "target" in item && item.target
           ? { target: item.target }
@@ -88,6 +95,7 @@ const lineVariants: MotionProps["variants"] = {
           initial="rest"
           while-hover="hover"
           class="group flex items-center gap-2 cursor-pointer"
+          @click="scrollToTop"
         >
           <motion.span
             :variants="starVariants"

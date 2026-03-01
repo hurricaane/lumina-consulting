@@ -45,7 +45,7 @@ const socialLinks = computed(() => {
 </script>
 
 <template>
-  <footer class="bg-[oklch(0.095_0.018_240)] text-[oklch(0.92_0.01_230)] pt-16 pb-8">
+  <footer id="footer-sentinel" class="bg-[oklch(0.095_0.018_240)] text-[oklch(0.92_0.01_230)] pt-16 pb-8">
     <!-- Main grid -->
     <UContainer>
       <div class="grid grid-cols-1 gap-12 pb-12 md:grid-cols-[3fr_2fr] md:gap-16 md:items-start">
