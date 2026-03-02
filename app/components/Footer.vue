@@ -52,8 +52,16 @@ const socialLinks = computed(() => {
         <!-- Brand column -->
         <div class="flex flex-col gap-6">
           <!-- Logo -->
-          <div class="flex items-center gap-2">
-            <span class="text-lumina-300 text-xs leading-none" aria-hidden="true">✦</span>
+          <div class="flex items-center gap-2.5">
+            <NuxtImg
+              src="/images/logo.png"
+              alt=""
+              :width="36"
+              :height="36"
+              format="webp"
+              quality="90"
+              class="size-9 object-contain shrink-0"
+            />
             <span class="font-display text-lg font-medium tracking-[0.08em] uppercase text-[oklch(0.92_0.01_230)]">
               Lumina Consulting
             </span>

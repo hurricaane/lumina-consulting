@@ -51,13 +51,13 @@ const navigationItems = computed<NavigationMenuItem[]>(() => {
 const ctaLabel = computed(() => props.settings?.data.navigation_cta.text || "CTA");
 const ctaLink = computed(() => asLink(props.settings?.data.navigation_cta));
 
-const starVariants: MotionProps["variants"] = {
+const logoVariants: MotionProps["variants"] = {
   rest: {
-    rotate: 0,
+    scale: 1,
     transition: { type: "spring", stiffness: 300, damping: 20 },
   },
   hover: {
-    rotate: 72,
+    scale: 1.12,
     transition: { type: "spring", stiffness: 400, damping: 18 },
   },
 };
@@ -97,15 +97,19 @@ const lineVariants: MotionProps["variants"] = {
           class="group flex items-center gap-2 cursor-pointer"
           @click="scrollToTop"
         >
-          <motion.span
-            :variants="starVariants"
-            aria-hidden="true"
-            class="text-primary text-xs leading-none"
-          >
-            ✦
-          </motion.span>
+          <motion.div :variants="logoVariants" class="size-12 shrink-0 flex items-center justify-center">
+            <NuxtImg
+              src="/images/logo.png"
+              alt=""
+              :width="48"
+              :height="48"
+              format="webp"
+              quality="90"
+              class="size-12 object-contain"
+            />
+          </motion.div>
 
-          <div class="relative inline-flex items-baseline gap-[0.2em]">
+          <div class="relative inline-flex items-center gap-[0.2em]">
             <span class="font-display text-[1.125rem] font-medium tracking-tight text-lumina-deep">
               Lumina
             </span>
@@ -114,7 +118,7 @@ const lineVariants: MotionProps["variants"] = {
             >
               Consulting
             </span>
-            <motion.div :variants="lineVariants" class="absolute inset-x-0 -bottom-0.5 h-px bg-primary origin-left" />
+            <motion.div :variants="lineVariants" class="absolute inset-x-0 -bottom-1 h-0.5 bg-primary origin-left will-change-transform" />
           </div>
         </motion.div>
       </template>

@@ -3,6 +3,11 @@ export default defineAppConfig({
     colors: {
       primary: "lumina",
     },
+    header: {
+      slots: {
+        title: "shrink-0 flex items-center gap-1.5",
+      },
+    },
     navigationMenu: {
       slots: {
         list: "items-center gap-8 isolate min-w-0",
