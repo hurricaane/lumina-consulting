@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Lumina Consulting",
+      titleTemplate: "%s",
       htmlAttrs: { lang: "fr" },
       meta: [{ charset: "utf-8" }],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],

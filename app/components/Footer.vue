@@ -142,6 +142,16 @@ const socialLinks = computed(() => {
           >
             Politique de confidentialité
           </NuxtLink>
+          <span
+            class="text-[0.625rem] text-[oklch(0.92_0.01_230/0.42)] opacity-40 select-none"
+            aria-hidden="true"
+          >—</span>
+          <NuxtLink
+            to="/cgv"
+            class="relative text-[0.6875rem] tracking-[0.09em] text-[oklch(0.92_0.01_230/0.42)] no-underline pb-px transition-colors duration-250 hover:text-[oklch(0.92_0.01_230)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-current after:scale-x-0 after:origin-right after:[transition:transform_0.4s_cubic-bezier(0.76,0,0.24,1)] hover:after:scale-x-100 hover:after:origin-left"
+          >
+            CGV
+          </NuxtLink>
         </nav>
       </div>
     </UContainer>
