@@ -15,7 +15,7 @@ export default withNuxt(
         semi: true,
         quotes: "double",
       },
-      ignores: [".pnpm-store/**", "**/migrations/*", "**/components/ui/*", "CLAUDE.md", ".specify/**", "prismicio-types.d.ts"],
+      ignores: [".pnpm-store/**", "**/migrations/*", "**/components/ui/*", "CLAUDE.md", ".specify/**", "prismicio-types.d.ts", "docs/**"],
     },
     {
       rules: {

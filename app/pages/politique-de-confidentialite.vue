@@ -36,8 +36,8 @@ const sections: LegalSection[] = [
   },
   {
     number: "02",
-    title: "Données collectées",
-    body: "Ce site ne collecte aucune donnée personnelle de façon volontaire : il n'existe ni formulaire de contact, ni espace membre, ni inscription à une newsletter, ni outil d'analyse comportementale.",
+    title: "Données collectées — formulaire de contact",
+    body: "Ce site collecte des données personnelles exclusivement via son formulaire de contact (page /contact). Les données transmises sont : votre nom complet, votre adresse email et le contenu de votre message. Ces données sont collectées dans le seul but de traiter votre demande et d'y répondre. La base légale du traitement est l'intérêt légitime de Lumina Consulting (réponse à une démarche initiée par l'utilisateur). Elles sont acheminées via Resend (Resend Inc., États-Unis), service de messagerie transactionnelle qui agit en qualité de sous-traitant et ne réutilise pas ces données à des fins commerciales. Vos données ne sont ni revendues ni partagées avec d'autres tiers. Elles sont conservées pour la durée nécessaire au suivi de votre demande, et au maximum trois ans.",
   },
   {
     number: "03",
@@ -57,7 +57,7 @@ const sections: LegalSection[] = [
   {
     number: "06",
     title: "Vos droits",
-    body: "Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de portabilité concernant vos données personnelles. Dans la mesure où ce site ne collecte aucune donnée directement, ces droits s'exercent principalement auprès de l'hébergeur. Pour toute demande ou interrogation, vous pouvez contacter Lumina Consulting à l'adresse indiquée ci-dessus. Vous disposez également du droit d'introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) : cnil.fr.",
+    body: "Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de portabilité concernant vos données personnelles. Pour exercer ces droits ou pour toute question relative au traitement de vos données, contactez Lumina Consulting à l'adresse email indiquée en section 01. Vous disposez également du droit d'introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) : cnil.fr.",
   },
   {
     number: "07",

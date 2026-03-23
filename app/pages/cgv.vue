@@ -94,7 +94,6 @@ const sections: LegalSection[] = [
   <section class="py-[clamp(4rem,8vw,7rem)]">
     <UContainer>
       <div class="max-w-[680px] mx-auto">
-
         <!-- ─── Back link ─────────────────────────────────────────── -->
         <motion.div
           :initial="{ opacity: 0, x: -10 }"
@@ -153,7 +152,6 @@ const sections: LegalSection[] = [
             </p>
           </motion.div>
         </div>
-
       </div>
     </UContainer>
   </section>

@@ -54,7 +54,7 @@ const sections: LegalSection[] = [
   {
     number: "04",
     title: "Données personnelles",
-    body: "Ce site ne collecte aucune donnée personnelle. Il n'existe ni formulaire de collecte, ni cookie de traçage, ni outil d'analyse comportementale. Un unique cookie technique strictement nécessaire peut être déposé pour le bon fonctionnement du rendu des pages. Pour en savoir plus, consultez la politique de confidentialité.",
+    body: "Ce site collecte des données personnelles uniquement via son formulaire de contact (nom complet, adresse email, message), dans le but exclusif de traiter les demandes reçues. Aucun cookie de traçage ni outil d'analyse comportementale n'est utilisé. Un unique cookie technique strictement nécessaire peut être déposé pour le bon fonctionnement du rendu des pages. Pour en savoir plus, consultez la politique de confidentialité.",
   },
 ];
 </script>

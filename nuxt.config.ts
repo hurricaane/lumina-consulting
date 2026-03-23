@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import vue from "@vitejs/plugin-vue";
 
 // @ts-expect-error Don't know why this fires
 import { apiEndpoint, repositoryName } from "./slicemachine.config.json";
@@ -25,6 +26,12 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+  },
+
+  nitro: {
+    rollupConfig: {
+      plugins: [vue()],
+    },
   },
 
   modules: [

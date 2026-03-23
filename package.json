@@ -19,7 +19,11 @@
   "dependencies": {
     "@nuxt/ui": "^4.4.0",
     "@tailwindcss/vite": "^4.2.0",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vue-email/components": "^0.0.21",
+    "@vue-email/render": "^0.0.9",
     "motion-v": "2.0.0-beta.4",
+    "resend": "^6.9.4",
     "tailwindcss": "^4.2.0",
     "vue": "^3.5.28",
     "vue-router": "4.6.4",
