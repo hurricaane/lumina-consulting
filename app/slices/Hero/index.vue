@@ -109,13 +109,13 @@ const ease: Easing = [0.16, 1, 0.3, 1];
           <PrismicLink
             v-if="isFilled.link(link) && link.variant === 'Solid'"
             :field="link"
-            class="inline-flex items-center justify-center px-7.5 py-3 rounded-full font-sans text-[0.9375rem] font-medium tracking-[0.01em] leading-none whitespace-nowrap transition-all duration-300 active:scale-[0.97] bg-lumina-300 text-[oklch(0.18_0.04_240)] border-[1.5px] border-transparent hover:bg-lumina-400 hover:shadow-[0_0_28px_oklch(0.84_0.09_230/0.42)]"
+            class="inline-flex items-center justify-center px-7.5 py-3 rounded-full font-sans text-[0.9375rem] font-medium tracking-[0.01em] leading-none whitespace-nowrap transition-all duration-300 active:scale-[0.97] bg-lumina-300 text-[oklch(0.18_0.04_240)] border-[1.5px] border-transparent hover:bg-lumina-400 hover:shadow-[0_0_28px_oklch(0.84_0.09_230/0.42)] cursor-pointer"
           />
           <!-- Outlined variant -->
           <PrismicLink
             v-else-if="isFilled.link(link)"
             :field="link"
-            class="inline-flex items-center justify-center px-7.5 py-3 rounded-full font-sans text-[0.9375rem] font-medium tracking-[0.01em] leading-none whitespace-nowrap transition-all duration-300 active:scale-[0.97] bg-transparent text-[oklch(0.18_0.04_240)] border-[1.5px] border-[oklch(0.84_0.09_230/0.42)] hover:bg-[oklch(0.84_0.09_230/0.08)] hover:border-[oklch(0.84_0.09_230/0.72)]"
+            class="inline-flex items-center justify-center px-7.5 py-3 rounded-full font-sans text-[0.9375rem] font-medium tracking-[0.01em] leading-none whitespace-nowrap transition-all duration-300 active:scale-[0.97] bg-transparent text-[oklch(0.18_0.04_240)] border-[1.5px] border-[oklch(0.84_0.09_230/0.42)] hover:bg-[oklch(0.84_0.09_230/0.08)] hover:border-[oklch(0.84_0.09_230/0.72)] cursor-pointer"
           />
         </template>
       </motion.div>

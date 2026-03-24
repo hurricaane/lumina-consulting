@@ -45,7 +45,7 @@ const ease: Easing = [0.16, 1, 0.3, 1];
         <PrismicLink
           v-if="isFilled.link(slice.primary.cta_link)"
           :field="slice.primary.cta_link"
-          class="hidden md:inline-flex items-center gap-2 text-sm font-medium text-lumina-deep hover:text-primary transition-colors duration-300 shrink-0 pb-1.5 group"
+          class="hidden md:inline-flex items-center gap-2 text-sm font-medium text-lumina-deep hover:text-primary transition-colors duration-300 shrink-0 pb-1.5 group cursor-pointer"
         >
           <span>{{ slice.primary.cta_link.text ?? "Voir tous les projets" }}</span>
           <span class="group-hover:translate-x-1 transition-transform duration-300 ease-out">→</span>
@@ -104,7 +104,7 @@ const ease: Easing = [0.16, 1, 0.3, 1];
           <PrismicLink
             v-if="isFilled.link(slice.primary.items[0].link)"
             :field="slice.primary.items[0].link"
-            class="absolute inset-0"
+            class="absolute inset-0 cursor-pointer"
             aria-label="Voir le projet"
           />
         </motion.div>
@@ -161,7 +161,7 @@ const ease: Easing = [0.16, 1, 0.3, 1];
             <PrismicLink
               v-if="isFilled.link(item.link)"
               :field="item.link"
-              class="absolute inset-0"
+              class="absolute inset-0 cursor-pointer"
               aria-label="Voir le projet"
             />
           </motion.div>
@@ -173,7 +173,7 @@ const ease: Easing = [0.16, 1, 0.3, 1];
         <PrismicLink
           v-if="isFilled.link(slice.primary.cta_link)"
           :field="slice.primary.cta_link"
-          class="inline-flex items-center gap-2 text-sm font-medium text-lumina-deep hover:text-primary transition-colors duration-300 group"
+          class="inline-flex items-center gap-2 text-sm font-medium text-lumina-deep hover:text-primary transition-colors duration-300 group cursor-pointer"
         >
           <span>{{ slice.primary.cta_link.text ?? "Voir tous les projets" }}</span>
           <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>

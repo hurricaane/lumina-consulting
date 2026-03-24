@@ -80,7 +80,7 @@ const sections: LegalSection[] = [
         >
           <NuxtLink
             to="/"
-            class="inline-flex items-center gap-2 text-[0.6875rem] font-semibold tracking-[0.15em] uppercase text-lumina-deep/35 hover:text-primary transition-colors duration-300 group"
+            class="inline-flex items-center gap-2 text-[0.6875rem] font-semibold tracking-[0.15em] uppercase text-lumina-deep/35 hover:text-primary transition-colors duration-300 group cursor-pointer"
           >
             <span class="group-hover:-translate-x-0.5 transition-transform duration-300 ease-out">←</span>
             <span>Accueil</span>
@@ -141,7 +141,7 @@ const sections: LegalSection[] = [
                     :href="row.href"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-primary hover:text-lumina-600 underline underline-offset-2 decoration-lumina-300/50 transition-colors duration-200"
+                    class="text-primary hover:text-lumina-600 underline underline-offset-2 decoration-lumina-300/50 transition-colors duration-200 cursor-pointer"
                   >
                     {{ row.value }}
                   </a>

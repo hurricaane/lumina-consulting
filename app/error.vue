@@ -55,7 +55,7 @@ function handleError() {
       </p>
 
       <button
-        class="group inline-flex items-center gap-3 px-7 py-3.5 bg-lumina-deep text-white text-[0.875rem] font-semibold tracking-[0.04em] rounded-full transition-all duration-300 hover:shadow-[0_8px_40px_oklch(0.25_0.04_240_/_0.22)]"
+        class="group inline-flex items-center gap-3 px-7 py-3.5 bg-lumina-deep text-white text-[0.875rem] font-semibold tracking-[0.04em] rounded-full transition-all duration-300 hover:shadow-[0_8px_40px_oklch(0.25_0.04_240_/_0.22)] cursor-pointer"
         @click="handleError"
       >
         <span class="transition-transform duration-300 group-hover:-translate-x-0.5">←</span>

@@ -82,7 +82,7 @@ const socialLinks = computed(() => {
               v-for="(item, index) in socialLinks"
               :key="index"
               :href="asLink(item.link) ?? '#'"
-              class="flex items-center justify-center size-8 rounded-md text-[oklch(0.92_0.01_230/0.42)] text-[0.9375rem] transition-[color,background] duration-200 hover:text-[oklch(0.92_0.01_230)] hover:bg-white/8"
+              class="flex items-center justify-center size-8 rounded-md text-[oklch(0.92_0.01_230/0.42)] text-[0.9375rem] transition-[color,background] duration-200 hover:text-[oklch(0.92_0.01_230)] hover:bg-white/8 cursor-pointer"
               :aria-label="item.icon ?? 'social link'"
             >
               <UIcon :name="ICON_MAP[item.icon ?? ''] ?? 'i-lucide-link'" />
@@ -101,7 +101,7 @@ const socialLinks = computed(() => {
               :key="item.to as string"
               :to="item.to as string"
               :target="(item.target as string | undefined)"
-              class="relative inline-flex items-center text-sm tracking-[0.02em] text-[oklch(0.92_0.01_230)] no-underline py-[0.3rem] opacity-70 [transition:opacity_0.25s_ease,padding-left_0.35s_cubic-bezier(0.25,0,0,1)] hover:opacity-100 hover:pl-4.5 before:content-[''] before:absolute before:left-0 before:top-1/2 before:h-px before:w-0 before:bg-lumina-300 before:-translate-y-1/2 before:[transition:width_0.35s_cubic-bezier(0.25,0,0,1)] hover:before:w-3"
+              class="relative inline-flex items-center text-sm tracking-[0.02em] text-[oklch(0.92_0.01_230)] no-underline py-[0.3rem] opacity-70 [transition:opacity_0.25s_ease,padding-left_0.35s_cubic-bezier(0.25,0,0,1)] hover:opacity-100 hover:pl-4.5 before:content-[''] before:absolute before:left-0 before:top-1/2 before:h-px before:w-0 before:bg-lumina-300 before:-translate-y-1/2 before:[transition:width_0.35s_cubic-bezier(0.25,0,0,1)] hover:before:w-3 cursor-pointer"
             >
               {{ item.label }}
             </NuxtLink>
@@ -128,7 +128,7 @@ const socialLinks = computed(() => {
         <nav class="flex items-center gap-2.5" aria-label="Legal links">
           <NuxtLink
             to="/mentions-legales"
-            class="relative text-[0.6875rem] tracking-[0.09em] text-[oklch(0.92_0.01_230/0.42)] no-underline pb-px transition-colors duration-250 hover:text-[oklch(0.92_0.01_230)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-current after:scale-x-0 after:origin-right after:[transition:transform_0.4s_cubic-bezier(0.76,0,0.24,1)] hover:after:scale-x-100 hover:after:origin-left"
+            class="relative text-[0.6875rem] tracking-[0.09em] text-[oklch(0.92_0.01_230/0.42)] no-underline pb-px transition-colors duration-250 hover:text-[oklch(0.92_0.01_230)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-current after:scale-x-0 after:origin-right after:[transition:transform_0.4s_cubic-bezier(0.76,0,0.24,1)] hover:after:scale-x-100 hover:after:origin-left cursor-pointer"
           >
             Mentions légales
           </NuxtLink>
@@ -138,7 +138,7 @@ const socialLinks = computed(() => {
           >—</span>
           <NuxtLink
             to="/politique-de-confidentialite"
-            class="relative text-[0.6875rem] tracking-[0.09em] text-[oklch(0.92_0.01_230/0.42)] no-underline pb-px transition-colors duration-250 hover:text-[oklch(0.92_0.01_230)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-current after:scale-x-0 after:origin-right after:[transition:transform_0.4s_cubic-bezier(0.76,0,0.24,1)] hover:after:scale-x-100 hover:after:origin-left"
+            class="relative text-[0.6875rem] tracking-[0.09em] text-[oklch(0.92_0.01_230/0.42)] no-underline pb-px transition-colors duration-250 hover:text-[oklch(0.92_0.01_230)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-current after:scale-x-0 after:origin-right after:[transition:transform_0.4s_cubic-bezier(0.76,0,0.24,1)] hover:after:scale-x-100 hover:after:origin-left cursor-pointer"
           >
             Politique de confidentialité
           </NuxtLink>
@@ -148,7 +148,7 @@ const socialLinks = computed(() => {
           >—</span>
           <NuxtLink
             to="/cgv"
-            class="relative text-[0.6875rem] tracking-[0.09em] text-[oklch(0.92_0.01_230/0.42)] no-underline pb-px transition-colors duration-250 hover:text-[oklch(0.92_0.01_230)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-current after:scale-x-0 after:origin-right after:[transition:transform_0.4s_cubic-bezier(0.76,0,0.24,1)] hover:after:scale-x-100 hover:after:origin-left"
+            class="relative text-[0.6875rem] tracking-[0.09em] text-[oklch(0.92_0.01_230/0.42)] no-underline pb-px transition-colors duration-250 hover:text-[oklch(0.92_0.01_230)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-current after:scale-x-0 after:origin-right after:[transition:transform_0.4s_cubic-bezier(0.76,0,0.24,1)] hover:after:scale-x-100 hover:after:origin-left cursor-pointer"
           >
             CGV
           </NuxtLink>

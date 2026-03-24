@@ -151,7 +151,7 @@ async function submit() {
                 href="https://cal.com/lumina-consulting-5ayxhb/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="group inline-flex items-center gap-3 px-7 py-3.5 bg-lumina-300 text-lumina-deep text-[0.875rem] font-semibold tracking-[0.04em] rounded-full transition-all duration-300 hover:bg-lumina-200 hover:shadow-[0_0_28px_oklch(0.84_0.09_230_/_0.5)]"
+                class="group inline-flex items-center gap-3 px-7 py-3.5 bg-lumina-300 text-lumina-deep text-[0.875rem] font-semibold tracking-[0.04em] rounded-full transition-all duration-300 hover:bg-lumina-200 hover:shadow-[0_0_28px_oklch(0.84_0.09_230_/_0.5)] cursor-pointer"
               >
                 Réserver un appel
                 <span class="transition-transform duration-300 group-hover:translate-x-0.5">→</span>
@@ -308,7 +308,7 @@ async function submit() {
               <button
                 type="submit"
                 :disabled="status === 'loading'"
-                class="group inline-flex items-center gap-3 px-7 py-3.5 text-[0.8125rem] font-semibold tracking-[0.08em] uppercase border border-lumina-deep/15 text-lumina-deep/50 hover:border-lumina-deep/30 hover:text-lumina-deep/80 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
+                class="group inline-flex items-center gap-3 px-7 py-3.5 text-[0.8125rem] font-semibold tracking-[0.08em] uppercase border border-lumina-deep/15 text-lumina-deep/50 hover:border-lumina-deep/30 hover:text-lumina-deep/80 transition-all duration-300 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed"
               >
                 <span>{{ status === 'loading' ? 'Envoi en cours…' : 'Envoyer' }}</span>
                 <span
