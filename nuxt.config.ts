@@ -30,7 +30,9 @@ export default defineNuxtConfig({
 
   nitro: {
     rollupConfig: {
-      plugins: [vue()],
+      plugins: [
+        vue(),
+      ],
     },
   },
 

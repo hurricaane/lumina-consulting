@@ -73,7 +73,8 @@ type PageDocumentDataSlicesSlice =
   | RealisationsSlice
   | MethodologieSlice
   | ExpertiseSlice
-  | RichTextSlice;
+  | RichTextSlice
+  | AtelierSlice;
 
 /**
  * Content for Page documents
@@ -281,6 +282,142 @@ export type SettingsDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = PageDocument | SettingsDocument;
+
+/**
+ * Item in *Atelier → Default → Primary → Principles*
+ */
+export interface AtelierSliceDefaultPrimaryItemsItem {
+  /**
+   * Title field in *Atelier → Default → Primary → Principles*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: atelier.default.primary.items[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Body field in *Atelier → Default → Primary → Principles*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: atelier.default.primary.items[].body
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  body: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Atelier → Default → Primary*
+ */
+export interface AtelierSliceDefaultPrimary {
+  /**
+   * Eyebrow field in *Atelier → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Studio · Nîmes
+   * - **API ID Path**: atelier.default.primary.eyebrow
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  eyebrow: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Atelier → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: atelier.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Intro field in *Atelier → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: atelier.default.primary.intro
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  intro: prismic.RichTextField;
+
+  /**
+   * Manifesto field in *Atelier → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: atelier.default.primary.manifesto
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  manifesto: prismic.RichTextField;
+
+  /**
+   * Principles field in *Atelier → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: atelier.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  items: prismic.GroupField<Simplify<AtelierSliceDefaultPrimaryItemsItem>>;
+
+  /**
+   * Closing Text field in *Atelier → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: atelier.default.primary.closing_text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  closing_text: prismic.RichTextField;
+
+  /**
+   * CTA Link field in *Atelier → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: atelier.default.primary.cta_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  cta_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Default variation for Atelier Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type AtelierSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AtelierSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Atelier*
+ */
+type AtelierSliceVariation = AtelierSliceDefault;
+
+/**
+ * Atelier Shared Slice
+ *
+ * - **API ID**: `atelier`
+ * - **Description**: About page for Lumina Consulting
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type AtelierSlice = prismic.SharedSlice<
+  "atelier",
+  AtelierSliceVariation
+>;
 
 /**
  * Item in *Expertise → Default → Primary → Items*
@@ -765,6 +902,11 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocumentDataFooterSocialLinksItem,
       AllDocumentTypes,
+      AtelierSlice,
+      AtelierSliceDefaultPrimaryItemsItem,
+      AtelierSliceDefaultPrimary,
+      AtelierSliceVariation,
+      AtelierSliceDefault,
       ExpertiseSlice,
       ExpertiseSliceDefaultPrimaryItemsItem,
       ExpertiseSliceDefaultPrimary,

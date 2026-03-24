@@ -10,6 +10,10 @@ const { data: page } = await useAsyncData(
   () => client.getByUID("page", route.params.uid as string),
 );
 
+if (!page.value) {
+  throw createError({ statusCode: 404, fatal: true });
+}
+
 useSeoMeta({
   title: page.value?.data.meta_title,
   ogTitle: page.value?.data.meta_title,

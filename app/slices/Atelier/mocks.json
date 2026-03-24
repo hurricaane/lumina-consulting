@@ -1,0 +1,184 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "eyebrow": {
+        "__TYPE__": "FieldContent",
+        "value": "L'Atelier · Lumina Consulting",
+        "type": "Text"
+      },
+      "heading": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Ce que nous construisons."
+            }
+          }
+        ]
+      },
+      "intro": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Lumina Consulting est un studio indépendant pensé pour les fondateurs, les porteurs de projets et ceux qui refusent de se contenter d'une présence ordinaire. Nous construisons des identités numériques qui durent — avec l'intention d'un artisan et l'exigence d'un éditeur."
+            }
+          }
+        ]
+      },
+      "manifesto": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Chaque projet mérite un regard singulier, une architecture soignée et des mots qui portent quelque chose."
+            }
+          }
+        ]
+      },
+      "items": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "a1b2c3d4-e5f6-4890-abcd-ef1234567890",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Clarté",
+                  "type": "Text"
+                }
+              ],
+              [
+                "body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Nous commençons par comprendre avant de concevoir. Chaque décision de design repose sur une intention claire, jamais sur une convention."
+                      }
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "b2c3d4e5-f6a7-4901-bcde-f12345678901",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Précision",
+                  "type": "Text"
+                }
+              ],
+              [
+                "body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Les détails ne sont pas des finitions — ils sont la fondation. Nous soignons chaque typographie, chaque transition, chaque mot."
+                      }
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "92eeb41a-cc53-4059-b222-43fa47e84083",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Engagement",
+                  "type": "Text"
+                }
+              ],
+              [
+                "body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Nous ne livrons pas des maquettes. Nous nous engageons sur des résultats — un site qui convertit, une identité qui reste."
+                      }
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "3856262b-ba1c-4a4b-a894-aa8f61572b13",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Durabilité",
+                  "type": "Text"
+                }
+              ],
+              [
+                "body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Ce que nous construisons doit traverser le temps. Pas de tendances éphémères — des choix qui restent justes dans trois ans."
+                      }
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "closing_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Si vous avez un projet en tête — ambitieux, flou, ou encore à l'état de pressentiment — c'est exactement là qu'on intervient."
+            }
+          }
+        ]
+      },
+      "cta_link": {
+        "key": "334cebfe-7e0c-4b75-93ed-f61df55955fa",
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "/contact",
+          "text": "Parlons de votre projet"
+        }
+      }
+    },
+    "items": []
+  }
+]

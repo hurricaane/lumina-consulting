@@ -29,6 +29,9 @@
             },
             "rich_text": {
               "type": "SharedSlice"
+            },
+            "atelier": {
+              "type": "SharedSlice"
             }
           }
         }
