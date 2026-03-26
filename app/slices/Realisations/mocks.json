@@ -19,21 +19,11 @@
           }
         ]
       },
-      "cta_link": {
-        "key": "3b16e98e-6ff7-4e91-b335-654f17064660",
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "http://localhost:3000",
-          "text": "Voir tous les projets"
-        }
-      },
       "items": {
         "__TYPE__": "GroupContentType",
         "value": [
           {
             "__TYPE__": "GroupItemContent",
-            "key": "a1234567-89ab-4def-8012-123456789abc",
             "value": [
               [
                 "image",
@@ -100,7 +90,6 @@
           },
           {
             "__TYPE__": "GroupItemContent",
-            "key": "fe2f30c5-9689-4405-a433-0512af78b8f7",
             "value": [
               [
                 "image",
@@ -167,7 +156,6 @@
           },
           {
             "__TYPE__": "GroupItemContent",
-            "key": "ac7a0d2c-bc82-4d9e-bb17-9dafbf3bc6e1",
             "value": [
               [
                 "image",

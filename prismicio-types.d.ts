@@ -89,7 +89,7 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>; /**
    * Meta Title field in *Page*
    *
    * - **Field Type**: Text
@@ -97,7 +97,7 @@ interface PageDocumentData {
    * - **API ID Path**: page.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
-   */;
+   */
   meta_title: prismic.KeyTextField;
 
   /**
@@ -227,7 +227,7 @@ interface SettingsDocumentData {
     unknown,
     prismic.FieldState,
     never
-  > /**
+  >; /**
    * Footer Primary Text field in *Settings*
    *
    * - **Field Type**: Rich Text
@@ -235,7 +235,7 @@ interface SettingsDocumentData {
    * - **API ID Path**: settings.footer_primary_text
    * - **Tab**: Footer
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */;
+   */
   footer_primary_text: prismic.RichTextField;
 
   /**
@@ -723,22 +723,6 @@ export interface RealisationsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
   heading: prismic.RichTextField;
-
-  /**
-   * CTA Link field in *Realisations → Default → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: realisations.default.primary.cta_link
-   * - **Documentation**: https://prismic.io/docs/fields/link
-   */
-  cta_link: prismic.LinkField<
-    string,
-    string,
-    unknown,
-    prismic.FieldState,
-    never
-  >;
 
   /**
    * Items field in *Realisations → Default → Primary*

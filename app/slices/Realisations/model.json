@@ -28,17 +28,6 @@
             "single": "heading2"
           }
         },
-        "cta_link": {
-          "type": "Link",
-          "config": {
-            "label": "CTA Link",
-            "placeholder": "",
-            "select": null,
-            "allowTargetBlank": true,
-            "allowText": true,
-            "repeat": false
-          }
-        },
         "items": {
           "type": "Group",
           "config": {
@@ -75,6 +64,13 @@
                 "config": {
                   "label": "Description",
                   "placeholder": ""
+                }
+              },
+              "badge": {
+                "type": "Text",
+                "config": {
+                  "label": "Badge (optional)",
+                  "placeholder": "Refonte en cours, En cours…"
                 }
               },
               "link": {
