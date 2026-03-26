@@ -32,6 +32,9 @@
             },
             "atelier": {
               "type": "SharedSlice"
+            },
+            "temoignages": {
+              "type": "SharedSlice"
             }
           }
         }

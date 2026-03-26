@@ -1,0 +1,124 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "label": {
+        "__TYPE__": "FieldContent",
+        "value": "Ce qu'ils en disent",
+        "type": "Text"
+      },
+      "items": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "quote",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Yannick a su transformer notre vision en quelque chose de bien plus beau que ce qu'on imaginait. Le résultat est élégant, fluide, et surtout — il nous ressemble vraiment."
+                      }
+                    }
+                  ]
+                }
+              ],
+              [
+                "name",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Christiane & Stéphane",
+                  "type": "Text"
+                }
+              ],
+              [
+                "context",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Mariage · Site événementiel",
+                  "type": "Text"
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "quote",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Un vrai partenaire, pas juste un prestataire. Il a pris le temps de comprendre ce qu'on construisait avant même de parler technique. Le site reflète ça à chaque page."
+                      }
+                    }
+                  ]
+                }
+              ],
+              [
+                "name",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Sophie M.",
+                  "type": "Text"
+                }
+              ],
+              [
+                "context",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Association · Identité numérique",
+                  "type": "Text"
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "quote",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "On avait une idée floue, un budget serré et peu de temps. Yannick a su cadrer, proposer, livrer — sans jamais sacrifier la qualité. C'est rare."
+                      }
+                    }
+                  ]
+                }
+              ],
+              [
+                "name",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Thomas R.",
+                  "type": "Text"
+                }
+              ],
+              [
+                "context",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Startup · Site vitrine",
+                  "type": "Text"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "items": []
+  }
+]

@@ -74,7 +74,8 @@ type PageDocumentDataSlicesSlice =
   | MethodologieSlice
   | ExpertiseSlice
   | RichTextSlice
-  | AtelierSlice;
+  | AtelierSlice
+  | TemoignagesSlice;
 
 /**
  * Content for Page documents
@@ -690,6 +691,16 @@ export interface RealisationsSliceDefaultPrimaryItemsItem {
   description: prismic.KeyTextField;
 
   /**
+   * Badge (optional) field in *Realisations → Default → Primary → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Refonte en cours, En cours…
+   * - **API ID Path**: realisations.default.primary.items[].badge
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  badge: prismic.KeyTextField;
+
+  /**
    * Link field in *Realisations → Default → Primary → Items*
    *
    * - **Field Type**: Link
@@ -858,6 +869,96 @@ export type RichTextSlice = prismic.SharedSlice<
   RichTextSliceVariation
 >;
 
+/**
+ * Item in *Temoignages → Default → Primary → Testimonials*
+ */
+export interface TemoignagesSliceDefaultPrimaryItemsItem {
+  /**
+   * Quote field in *Temoignages → Default → Primary → Testimonials*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: temoignages.default.primary.items[].quote
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  quote: prismic.RichTextField;
+
+  /**
+   * Name field in *Temoignages → Default → Primary → Testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Christiane & Stéphane
+   * - **API ID Path**: temoignages.default.primary.items[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Context (optional) field in *Temoignages → Default → Primary → Testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Mariage · Site événementiel
+   * - **API ID Path**: temoignages.default.primary.items[].context
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  context: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Temoignages → Default → Primary*
+ */
+export interface TemoignagesSliceDefaultPrimary {
+  /**
+   * Label field in *Temoignages → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Ce qu'ils en disent
+   * - **API ID Path**: temoignages.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Testimonials field in *Temoignages → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: temoignages.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  items: prismic.GroupField<Simplify<TemoignagesSliceDefaultPrimaryItemsItem>>;
+}
+
+/**
+ * Default variation for Temoignages Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TemoignagesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TemoignagesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Temoignages*
+ */
+type TemoignagesSliceVariation = TemoignagesSliceDefault;
+
+/**
+ * Temoignages Shared Slice
+ *
+ * - **API ID**: `temoignages`
+ * - **Description**: Testimonials section
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TemoignagesSlice = prismic.SharedSlice<
+  "temoignages",
+  TemoignagesSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -910,6 +1011,11 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
+      TemoignagesSlice,
+      TemoignagesSliceDefaultPrimaryItemsItem,
+      TemoignagesSliceDefaultPrimary,
+      TemoignagesSliceVariation,
+      TemoignagesSliceDefault,
     };
   }
 }

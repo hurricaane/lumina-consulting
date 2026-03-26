@@ -1,0 +1,58 @@
+{
+  "id": "temoignages",
+  "type": "SharedSlice",
+  "name": "Temoignages",
+  "description": "Testimonials section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": "Ce qu'ils en disent"
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Testimonials",
+            "repeat": true,
+            "fields": {
+              "quote": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Quote",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "multi": "paragraph,strong,em"
+                }
+              },
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name",
+                  "placeholder": "Christiane & Stéphane"
+                }
+              },
+              "context": {
+                "type": "Text",
+                "config": {
+                  "label": "Context (optional)",
+                  "placeholder": "Mariage · Site événementiel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
