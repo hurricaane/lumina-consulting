@@ -80,7 +80,7 @@ const layout = computed(() => {
               <div v-else class="absolute inset-0 bg-lumina-100" />
 
               <!-- Gradient overlay -->
-              <div class="absolute inset-0 bg-linear-to-t from-lumina-deep/85 via-lumina-deep/20 to-transparent" />
+              <div class="absolute inset-0 bg-linear-to-t from-lumina-deep/95 via-lumina-deep/40 to-transparent" />
 
               <!-- Badge -->
               <div v-if="isFilled.keyText(item.badge)" class="absolute top-4 right-4">
@@ -94,7 +94,7 @@ const layout = computed(() => {
               <div class="absolute inset-x-0 bottom-0 p-7 md:p-8">
                 <span
                   v-if="isFilled.keyText(item.category)"
-                  class="block text-[0.625rem] font-semibold tracking-[0.2em] text-white/50 uppercase mb-2.5 group-hover:-translate-y-0.5 transition-transform duration-500"
+                  class="block text-[0.625rem] font-semibold tracking-[0.2em] text-white/65 uppercase mb-2.5 group-hover:-translate-y-0.5 transition-transform duration-500"
                 >
                   {{ item.category }}
                 </span>
@@ -106,7 +106,7 @@ const layout = computed(() => {
                 </h3>
                 <p
                   v-if="isFilled.keyText(item.description)"
-                  class="text-[0.8125rem] text-white/45 mt-2 leading-relaxed group-hover:-translate-y-0.5 transition-transform duration-500 delay-[20ms]"
+                  class="text-[0.8125rem] text-white/70 mt-2 leading-relaxed group-hover:-translate-y-0.5 transition-transform duration-500 delay-[20ms]"
                 >
                   {{ item.description }}
                 </p>
@@ -148,7 +148,7 @@ const layout = computed(() => {
               class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-700 ease-out"
             />
             <div v-else class="absolute inset-0 bg-lumina-100" />
-            <div class="absolute inset-0 bg-linear-to-t from-lumina-deep/85 via-lumina-deep/20 to-transparent" />
+            <div class="absolute inset-0 bg-linear-to-t from-lumina-deep/95 via-lumina-deep/40 to-transparent" />
             <div v-if="isFilled.keyText(items[0].badge)" class="absolute top-4 right-4">
               <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/12 backdrop-blur-sm border border-white/20 text-[0.625rem] font-semibold tracking-[0.14em] uppercase text-white/80">
                 <span class="size-1.5 rounded-full bg-lumina-300 shrink-0" />
@@ -158,7 +158,7 @@ const layout = computed(() => {
             <div class="absolute inset-x-0 bottom-0 p-8 md:p-12">
               <span
                 v-if="isFilled.keyText(items[0].category)"
-                class="block text-[0.625rem] font-semibold tracking-[0.2em] text-white/50 uppercase mb-2.5"
+                class="block text-[0.625rem] font-semibold tracking-[0.2em] text-white/65 uppercase mb-2.5"
               >
                 {{ items[0].category }}
               </span>
@@ -168,7 +168,7 @@ const layout = computed(() => {
               >
                 {{ items[0].title }}
               </h3>
-              <p v-if="isFilled.keyText(items[0].description)" class="text-[0.875rem] text-white/45 mt-2.5">
+              <p v-if="isFilled.keyText(items[0].description)" class="text-[0.875rem] text-white/70 mt-2.5">
                 {{ items[0].description }}
               </p>
               <div class="mt-5 flex items-center gap-2 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400 ease-out">
@@ -202,7 +202,7 @@ const layout = computed(() => {
                 class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-700 ease-out"
               />
               <div v-else class="absolute inset-0 bg-lumina-100" />
-              <div class="absolute inset-0 bg-linear-to-t from-lumina-deep/85 via-lumina-deep/20 to-transparent" />
+              <div class="absolute inset-0 bg-linear-to-t from-lumina-deep/95 via-lumina-deep/40 to-transparent" />
               <div v-if="isFilled.keyText(items[0].badge)" class="absolute top-4 right-4">
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/12 backdrop-blur-sm border border-white/20 text-[0.625rem] font-semibold tracking-[0.14em] uppercase text-white/80">
                   <span class="size-1.5 rounded-full bg-lumina-300 shrink-0" />
@@ -213,7 +213,7 @@ const layout = computed(() => {
                 <div class="group-hover:-translate-y-0.5 transition-transform duration-500">
                   <span
                     v-if="isFilled.keyText(items[0].category)"
-                    class="block text-[0.625rem] font-semibold tracking-[0.2em] text-white/50 uppercase mb-2.5"
+                    class="block text-[0.625rem] font-semibold tracking-[0.2em] text-white/65 uppercase mb-2.5"
                   >
                     {{ items[0].category }}
                   </span>
@@ -223,7 +223,7 @@ const layout = computed(() => {
                   >
                     {{ items[0].title }}
                   </h3>
-                  <p v-if="isFilled.keyText(items[0].description)" class="text-[0.875rem] text-white/45 mt-2.5">
+                  <p v-if="isFilled.keyText(items[0].description)" class="text-[0.875rem] text-white/70 mt-2.5">
                     {{ items[0].description }}
                   </p>
                 </div>
@@ -259,7 +259,7 @@ const layout = computed(() => {
                   class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-700 ease-out"
                 />
                 <div v-else class="absolute inset-0 bg-lumina-100" />
-                <div class="absolute inset-0 bg-linear-to-t from-lumina-deep/85 via-lumina-deep/20 to-transparent" />
+                <div class="absolute inset-0 bg-linear-to-t from-lumina-deep/95 via-lumina-deep/40 to-transparent" />
                 <div v-if="isFilled.keyText(item.badge)" class="absolute top-4 right-4">
                   <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/12 backdrop-blur-sm border border-white/20 text-[0.625rem] font-semibold tracking-[0.14em] uppercase text-white/80">
                     <span class="size-1.5 rounded-full bg-lumina-300 shrink-0" />
@@ -269,7 +269,7 @@ const layout = computed(() => {
                 <div class="absolute inset-x-0 bottom-0 p-6 md:p-7 group-hover:-translate-y-0.5 transition-transform duration-500">
                   <span
                     v-if="isFilled.keyText(item.category)"
-                    class="block text-[0.625rem] font-semibold tracking-[0.2em] text-white/50 uppercase mb-2.5"
+                    class="block text-[0.625rem] font-semibold tracking-[0.2em] text-white/65 uppercase mb-2.5"
                   >
                     {{ item.category }}
                   </span>
@@ -279,7 +279,7 @@ const layout = computed(() => {
                   >
                     {{ item.title }}
                   </h3>
-                  <p v-if="isFilled.keyText(item.description)" class="text-[0.8125rem] text-white/45 mt-2">
+                  <p v-if="isFilled.keyText(item.description)" class="text-[0.8125rem] text-white/70 mt-2">
                     {{ item.description }}
                   </p>
                   <div class="mt-4 flex items-center gap-2 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400 ease-out">
