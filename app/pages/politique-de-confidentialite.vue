@@ -30,8 +30,8 @@ const sections: LegalSection[] = [
     title: "Responsable du traitement",
     content: [
       { label: "Identité", value: "Yannick Dossou — Lumina Consulting" },
-      { label: "Adresse", value: "206 Rue d'Oran, Résidence Rimbaud Bâtiment A/B, 30000 Nîmes, France" },
-      { label: "Email", value: "dossouyannick.pro@gmail.com", href: "mailto:dossouyannick.pro@gmail.com" },
+      { label: "Adresse", value: "206 Rue d'Oran, 30000 Nîmes, France" },
+      { label: "Email", value: "contact@luminaconsulting.fr", href: "mailto:contact@luminaconsulting.fr" },
     ],
   },
   {

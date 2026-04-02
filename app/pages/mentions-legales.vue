@@ -32,9 +32,9 @@ const sections: LegalSection[] = [
       { label: "SIREN", value: "934 402 900" },
       { label: "SIRET", value: "934 402 900 00021" },
       { label: "TVA intracommunautaire", value: "FR86934402900" },
-      { label: "Adresse", value: "206 Rue d'Oran, Résidence Rimbaud Bâtiment A/B, 30000 Nîmes, France" },
+      { label: "Adresse", value: "206 Rue d'Oran, 30000 Nîmes, France" },
       { label: "Site web", value: "luminaconsulting.fr", href: "https://luminaconsulting.fr" },
-      { label: "Email", value: "dossouyannick.pro@gmail.com", href: "mailto:dossouyannick.pro@gmail.com" },
+      { label: "Email", value: "contact@luminaconsulting.fr", href: "mailto:contact@luminaconsulting.fr" },
     ],
   },
   {
