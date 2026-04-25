@@ -42,10 +42,17 @@ export function useActiveSections(sectionIds: string[], clearId?: string) {
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (entry.isIntersecting)
-                activeSection.value = "";
-              else if (activeSection.value === "")
+              if (entry.isIntersecting) {
+                // Only mark "past all sections" when no section is currently
+                // active — prevents the footer from clearing the last section
+                // when both are simultaneously visible after a scroll-to click.
+                if (!sectionIds.includes(activeSection.value ?? "")) {
+                  activeSection.value = "";
+                }
+              }
+              else if (activeSection.value === "") {
                 activeSection.value = null;
+              }
             });
           },
           { threshold: 0 },

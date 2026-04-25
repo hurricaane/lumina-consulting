@@ -47,6 +47,13 @@
                   "label": "Context (optional)",
                   "placeholder": "Mariage · Site événementiel"
                 }
+              },
+              "rating": {
+                "type": "Number",
+                "config": {
+                  "label": "Rating (1–5)",
+                  "placeholder": "5"
+                }
               }
             }
           }
