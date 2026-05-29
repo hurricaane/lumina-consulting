@@ -15,6 +15,10 @@ const ICON_MAP: Record<string, string> = {
   users: "i-lucide-users",
   lightbulb: "i-lucide-lightbulb",
   target: "i-lucide-target",
+  gem: "i-lucide-gem",
+  zap: "i-lucide-zap",
+  shield_check: "i-lucide-shield-check",
+  handshake: "i-lucide-handshake",
 };
 
 const ease: Easing = [0.16, 1, 0.3, 1];
@@ -28,7 +32,7 @@ const ease: Easing = [0.16, 1, 0.3, 1];
     class="py-[clamp(5rem,10vw,8rem)] bg-[linear-gradient(to_bottom,var(--color-background)_0%,var(--color-lumina-50)_25%,var(--color-lumina-50)_75%,var(--color-background)_100%)]"
   >
     <UContainer>
-      <!-- ─── Header ──────────────────────────────────────────── -->
+      <!-- Header -->
       <motion.div
         class="grid grid-cols-1 md:grid-cols-[5fr_3fr] items-end gap-8 md:gap-20 mb-16 md:mb-20"
         :initial="{ opacity: 0, y: 22 }"
@@ -36,7 +40,6 @@ const ease: Easing = [0.16, 1, 0.3, 1];
         :transition="{ duration: 0.7, ease }"
         :in-view-options="{ once: true }"
       >
-        <!-- Left: label + heading -->
         <div>
           <span v-if="isFilled.keyText(slice.primary.label)" class="section-label">
             {{ slice.primary.label }}
@@ -53,7 +56,6 @@ const ease: Easing = [0.16, 1, 0.3, 1];
           />
         </div>
 
-        <!-- Right: description -->
         <div v-if="isFilled.richText(slice.primary.description)" class="md:pb-1">
           <PrismicRichText
             :field="slice.primary.description"
@@ -66,31 +68,23 @@ const ease: Easing = [0.16, 1, 0.3, 1];
         </div>
       </motion.div>
 
-      <!-- ─── Full-width hairline ─────────────────────────────── -->
-      <div class="h-px bg-lumina-100 mb-0" />
-
-      <!-- ─── Items grid ──────────────────────────────────────── -->
-      <div v-if="isFilled.group(slice.primary.items)" class="grid grid-cols-1 md:grid-cols-3">
+      <!-- 2x2 Cards grid -->
+      <div v-if="isFilled.group(slice.primary.items)" class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <motion.div
           v-for="(item, index) in slice.primary.items"
           :key="index"
-          class="group relative flex flex-col gap-5 pt-8 pb-10 md:px-8 md:first:pl-0 md:last:pr-0 border-b md:border-b-0 md:border-l md:first:border-l-0 border-lumina-100 transition-colors duration-300"
+          class="group flex flex-col gap-5 p-8 md:p-10 rounded-2xl bg-white/70 backdrop-blur-md border border-white/60 shadow-sm hover:shadow-md transition-shadow duration-300"
           :initial="{ opacity: 0, y: 28 }"
           :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.65, delay: index * 0.12, ease }"
+          :transition="{ duration: 0.65, delay: index * 0.1, ease }"
           :in-view-options="{ once: true }"
         >
-          <!-- Item number -->
-          <span class="text-[0.6875rem] font-semibold tracking-[0.18em] text-lumina-400 tabular-nums">
-            {{ String(index + 1).padStart(2, "0") }}
-          </span>
-
           <!-- Icon -->
           <div
             v-if="isFilled.select(item.icon)"
-            class="flex items-center justify-center size-11 rounded-xl bg-lumina-50 text-lumina-500 group-hover:bg-lumina-100 group-hover:text-lumina-600 transition-colors duration-300"
+            class="flex items-center justify-center size-12 rounded-xl bg-lumina-50 text-lumina-500 group-hover:bg-lumina-100 group-hover:text-lumina-600 transition-colors duration-300"
           >
-            <UIcon :name="ICON_MAP[item.icon ?? ''] ?? 'i-lucide-star'" class="size-4.5" />
+            <UIcon :name="ICON_MAP[item.icon ?? ''] ?? 'i-lucide-star'" class="size-5" />
           </div>
 
           <!-- Title -->

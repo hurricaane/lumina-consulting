@@ -55,7 +55,11 @@
                     "bar_chart",
                     "users",
                     "lightbulb",
-                    "target"
+                    "target",
+                    "gem",
+                    "zap",
+                    "shield_check",
+                    "handshake"
                   ]
                 }
               },
