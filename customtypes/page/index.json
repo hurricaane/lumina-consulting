@@ -35,6 +35,15 @@
             },
             "temoignages": {
               "type": "SharedSlice"
+            },
+            "problemes": {
+              "type": "SharedSlice"
+            },
+            "pourquoi_lumina": {
+              "type": "SharedSlice"
+            },
+            "cta_final": {
+              "type": "SharedSlice"
             }
           }
         }

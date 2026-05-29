@@ -10,4 +10,7 @@ export const components = defineSliceZoneComponents({
   methodologie: defineAsyncComponent(() => import("./Methodologie/index.vue")),
   realisations: defineAsyncComponent(() => import("./Realisations/index.vue")),
   rich_text: defineAsyncComponent(() => import("./Hero/index.vue")),
+  problemes: defineAsyncComponent(() => import("./Problemes/index.vue")),
+  pourquoi_lumina: defineAsyncComponent(() => import("./PourquoiLumina/index.vue")),
+  cta_final: defineAsyncComponent(() => import("./CtaFinal/index.vue")),
 });
