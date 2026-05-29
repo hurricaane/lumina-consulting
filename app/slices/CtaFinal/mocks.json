@@ -1,0 +1,45 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heading": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Votre marque mérite un site qui lui ressemble",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Prenons 30 minutes pour en parler. Pas de pitch, pas de pression — juste un échange sur votre projet et vos objectifs.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "cta_link": {
+        "key": "05b7f0ed-d72c-4efc-b7c0-69b4cfe17446",
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "/contact",
+          "target": "",
+          "text": "Discutons de votre projet"
+        }
+      }
+    },
+    "items": []
+  }
+]

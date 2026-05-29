@@ -75,7 +75,10 @@ type PageDocumentDataSlicesSlice =
   | ExpertiseSlice
   | RichTextSlice
   | AtelierSlice
-  | TemoignagesSlice;
+  | TemoignagesSlice
+  | ProblemesSlice
+  | PourquoiLuminaSlice
+  | CtaFinalSlice;
 
 /**
  * Content for Page documents
@@ -421,6 +424,77 @@ export type AtelierSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *CtaFinal → Default → Primary*
+ */
+export interface CtaFinalSliceDefaultPrimary {
+  /**
+   * Heading field in *CtaFinal → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta_final.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Text field in *CtaFinal → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta_final.default.primary.text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * CTA Link field in *CtaFinal → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta_final.default.primary.cta_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  cta_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Default variation for CtaFinal Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CtaFinalSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CtaFinalSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CtaFinal*
+ */
+type CtaFinalSliceVariation = CtaFinalSliceDefault;
+
+/**
+ * CtaFinal Shared Slice
+ *
+ * - **API ID**: `cta_final`
+ * - **Description**: Full-width closing CTA block
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CtaFinalSlice = prismic.SharedSlice<
+  "cta_final",
+  CtaFinalSliceVariation
+>;
+
+/**
  * Item in *Expertise → Default → Primary → Items*
  */
 export interface ExpertiseSliceDefaultPrimaryItemsItem {
@@ -440,6 +514,10 @@ export interface ExpertiseSliceDefaultPrimaryItemsItem {
     | "users"
     | "lightbulb"
     | "target"
+    | "gem"
+    | "zap"
+    | "shield_check"
+    | "handshake"
   >;
 
   /**
@@ -644,6 +722,210 @@ type MethodologieSliceVariation = MethodologieSliceDefault;
 export type MethodologieSlice = prismic.SharedSlice<
   "methodologie",
   MethodologieSliceVariation
+>;
+
+/**
+ * Item in *PourquoiLumina → Default → Primary → Items*
+ */
+export interface PourquoiLuminaSliceDefaultPrimaryItemsItem {
+  /**
+   * Icon field in *PourquoiLumina → Default → Primary → Items*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pourquoi_lumina.default.primary.items[].icon
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  icon: prismic.SelectField<
+    "user_check" | "activity" | "flask_conical" | "trending_up"
+  >;
+
+  /**
+   * Title field in *PourquoiLumina → Default → Primary → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pourquoi_lumina.default.primary.items[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *PourquoiLumina → Default → Primary → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pourquoi_lumina.default.primary.items[].description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *PourquoiLumina → Default → Primary*
+ */
+export interface PourquoiLuminaSliceDefaultPrimary {
+  /**
+   * Label field in *PourquoiLumina → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Pourquoi Lumina
+   * - **API ID Path**: pourquoi_lumina.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Heading field in *PourquoiLumina → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pourquoi_lumina.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Items field in *PourquoiLumina → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pourquoi_lumina.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  items: prismic.GroupField<
+    Simplify<PourquoiLuminaSliceDefaultPrimaryItemsItem>
+  >;
+}
+
+/**
+ * Default variation for PourquoiLumina Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PourquoiLuminaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PourquoiLuminaSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PourquoiLumina*
+ */
+type PourquoiLuminaSliceVariation = PourquoiLuminaSliceDefault;
+
+/**
+ * PourquoiLumina Shared Slice
+ *
+ * - **API ID**: `pourquoi_lumina`
+ * - **Description**: Why Lumina — asymmetric 2-col with sticky heading
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PourquoiLuminaSlice = prismic.SharedSlice<
+  "pourquoi_lumina",
+  PourquoiLuminaSliceVariation
+>;
+
+/**
+ * Item in *Problemes → Default → Primary → Items*
+ */
+export interface ProblemesSliceDefaultPrimaryItemsItem {
+  /**
+   * Icon field in *Problemes → Default → Primary → Items*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: problemes.default.primary.items[].icon
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  icon: prismic.SelectField<"eye_off" | "clock" | "shield_off">;
+
+  /**
+   * Title field in *Problemes → Default → Primary → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: problemes.default.primary.items[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *Problemes → Default → Primary → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: problemes.default.primary.items[].description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Problemes → Default → Primary*
+ */
+export interface ProblemesSliceDefaultPrimary {
+  /**
+   * Label field in *Problemes → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Le constat
+   * - **API ID Path**: problemes.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Problemes → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: problemes.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Items field in *Problemes → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: problemes.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  items: prismic.GroupField<Simplify<ProblemesSliceDefaultPrimaryItemsItem>>;
+}
+
+/**
+ * Default variation for Problemes Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ProblemesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProblemesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Problemes*
+ */
+type ProblemesSliceVariation = ProblemesSliceDefault;
+
+/**
+ * Problemes Shared Slice
+ *
+ * - **API ID**: `problemes`
+ * - **Description**: Pain points section — vertical list layout
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ProblemesSlice = prismic.SharedSlice<
+  "problemes",
+  ProblemesSliceVariation
 >;
 
 /**
@@ -902,6 +1184,16 @@ export interface TemoignagesSliceDefaultPrimaryItemsItem {
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
   context: prismic.KeyTextField;
+
+  /**
+   * Rating (1–5) field in *Temoignages → Default → Primary → Testimonials*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: 5
+   * - **API ID Path**: temoignages.default.primary.items[].rating
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  rating: prismic.NumberField;
 }
 
 /**
@@ -992,6 +1284,10 @@ declare module "@prismicio/client" {
       AtelierSliceDefaultPrimary,
       AtelierSliceVariation,
       AtelierSliceDefault,
+      CtaFinalSlice,
+      CtaFinalSliceDefaultPrimary,
+      CtaFinalSliceVariation,
+      CtaFinalSliceDefault,
       ExpertiseSlice,
       ExpertiseSliceDefaultPrimaryItemsItem,
       ExpertiseSliceDefaultPrimary,
@@ -1002,6 +1298,16 @@ declare module "@prismicio/client" {
       MethodologieSliceDefaultPrimary,
       MethodologieSliceVariation,
       MethodologieSliceDefault,
+      PourquoiLuminaSlice,
+      PourquoiLuminaSliceDefaultPrimaryItemsItem,
+      PourquoiLuminaSliceDefaultPrimary,
+      PourquoiLuminaSliceVariation,
+      PourquoiLuminaSliceDefault,
+      ProblemesSlice,
+      ProblemesSliceDefaultPrimaryItemsItem,
+      ProblemesSliceDefaultPrimary,
+      ProblemesSliceVariation,
+      ProblemesSliceDefault,
       RealisationsSlice,
       RealisationsSliceDefaultPrimaryItemsItem,
       RealisationsSliceDefaultPrimary,
