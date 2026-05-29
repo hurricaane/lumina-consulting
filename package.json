@@ -19,6 +19,7 @@
   "dependencies": {
     "@nuxt/ui": "^4.4.0",
     "@tailwindcss/vite": "^4.2.0",
+    "@vercel/analytics": "^2.0.1",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue-email/components": "^0.0.21",
     "@vue-email/render": "^0.0.9",

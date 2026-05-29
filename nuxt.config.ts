@@ -43,6 +43,7 @@ export default defineNuxtConfig({
     "@nuxtjs/prismic",
     "@nuxtjs/seo",
     "@nuxt/ui",
+    "@vercel/analytics",
   ],
 
   // Module Configuration
