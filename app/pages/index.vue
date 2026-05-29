@@ -3,7 +3,7 @@ import { asImageSrc } from "@prismicio/client";
 
 import { components } from "~/slices";
 
-useActiveSections(["expertises", "methodologie", "realisations", "temoignages"], "footer-sentinel");
+useActiveSections(["problemes", "expertises", "methodologie", "pourquoi-lumina"], "footer-sentinel");
 
 const { client } = usePrismic();
 const { data: page } = await useAsyncData(
