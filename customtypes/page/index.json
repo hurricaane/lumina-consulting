@@ -30,7 +30,7 @@
             "rich_text": {
               "type": "SharedSlice"
             },
-            "atelier": {
+            "a_propos": {
               "type": "SharedSlice"
             },
             "temoignages": {

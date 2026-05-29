@@ -1,0 +1,102 @@
+{
+  "id": "a_propos",
+  "type": "SharedSlice",
+  "name": "APropos",
+  "description": "About page — reassurance for e-commerce brand founders",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": "À propos"
+          }
+        },
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "story_label": {
+          "type": "Text",
+          "config": {
+            "label": "Story Label",
+            "placeholder": "Notre histoire"
+          }
+        },
+        "story": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Story",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Convictions",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "body": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Body",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "multi": "paragraph,strong,em"
+                }
+              }
+            }
+          }
+        },
+        "closing_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Closing Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph"
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link",
+            "allowText": true,
+            "allowTargetBlank": false,
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

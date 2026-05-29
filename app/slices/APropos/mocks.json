@@ -1,0 +1,234 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "eyebrow": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "À propos"
+      },
+      "heading": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Votre marque mérite mieux qu'un site générique.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "intro": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Les marques e-commerce investissent dans leur produit, leur branding, leur communauté. Mais quand un client arrive sur leur site, il ne retrouve rien de ce qui les rend uniques.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Lumina existe pour changer ça. Nous concevons des sites e-commerce qui reflètent vraiment votre marque — rapides, fiables, et pensés pour convertir.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "story_label": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Notre histoire"
+      },
+      "story": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Lumina est né d'un constat simple : trop de marques ambitieuses sont freinées par des sites qui ne leur ressemblent pas.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Avant de créer Lumina, nous venions d'un monde où la moindre erreur a des conséquences — celui des systèmes critiques et de la fiabilité technique. Des années passées à construire des infrastructures où les pannes ne sont pas une option.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "En découvrant l'univers des marques e-commerce, le contraste était frappant : des entrepreneurs investis, des produits remarquables, mais des sites livrés à la hâte par des prestataires qui disparaissent après la mise en ligne.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Lumina est la réponse à ce problème. Un studio qui apporte la même rigueur et le même souci du détail à votre site e-commerce qu'à une infrastructure critique — parce que pour votre marque, c'en est une.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "items": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Votre site est votre meilleur commercial"
+                }
+              ],
+              [
+                "body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Il accueille vos clients 24h/24. Il crée la première impression. Il transforme un visiteur curieux en acheteur convaincu. Votre site mérite autant d'attention et d'investissement que votre produit.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "La vitesse n'est pas un détail technique"
+                }
+              ],
+              [
+                "body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "C'est la première chose que vos visiteurs ressentent. Un site rapide inspire confiance. Un site lent fait fuir — et chaque seconde de chargement en trop vous coûte des ventes que vous ne verrez jamais.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Un site ne devrait jamais être abandonné"
+                }
+              ],
+              [
+                "body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "La mise en ligne n'est pas la fin du projet — c'est le début de l'accompagnement. Surveillance continue, mises à jour, optimisations. Votre site évolue avec votre marque, pas contre elle.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Sur mesure ne veut pas dire sur-compliqué"
+                }
+              ],
+              [
+                "body",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Un site construit pour vous, mais que vous pouvez gérer en toute autonomie. Des pages que vous modifiez vous-même, un back-office clair, zéro dépendance technique pour le quotidien.",
+                        "spans": []
+                      },
+                      "direction": "ltr"
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "closing_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Vous avez un projet e-commerce en tête ?",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "cta_link": {
+        "key": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "/contact",
+          "target": "",
+          "text": "Discutons de votre projet"
+        }
+      }
+    },
+    "items": []
+  }
+]

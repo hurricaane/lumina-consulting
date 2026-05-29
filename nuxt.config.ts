@@ -36,6 +36,10 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    "/atelier": { redirect: { to: "/a-propos", statusCode: 301 } },
+  },
+
   modules: [
     "motion-v/nuxt",
     "@nuxt/eslint",
