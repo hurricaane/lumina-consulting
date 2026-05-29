@@ -4,8 +4,8 @@ import type { Easing } from "motion-v";
 import { motion } from "motion-v";
 
 useSeoMeta({
-  title: "Contact — Lumina Consulting",
-  description: "Prenez rendez-vous pour un appel découverte de 30 minutes, ou envoyez un message directement. Premier contact gratuit et sans engagement.",
+  title: "Contact — Lumina Consulting · Sites e-commerce sur mesure",
+  description: "Réservez un appel découverte de 30 minutes pour discuter de votre site e-commerce. Gratuit et sans engagement.",
 });
 
 const ease: Easing = [0.16, 1, 0.3, 1];
@@ -111,7 +111,7 @@ async function submit() {
               class="font-display italic text-white leading-[1.05] tracking-[-0.03em] mb-8"
               style="font-size: clamp(2rem, 4.5vw, 3rem);"
             >
-              Parlons de<br>votre projet.
+              Parlons de votre<br>site e-commerce.
             </motion.h1>
 
             <!-- Description -->
@@ -121,7 +121,7 @@ async function submit() {
               :transition="{ duration: 0.55, delay: 0.44, ease }"
               class="text-[0.9375rem] leading-[1.8] text-white/45 max-w-[340px]"
             >
-              Partagez votre vision, vos enjeux, vos doutes. En 30 minutes, nous posons ensemble les premières bases de votre projet.
+              Partagez votre vision, vos enjeux, vos ambitions. En 30 minutes, nous posons ensemble les bases de votre futur site.
             </motion.p>
           </div>
 
