@@ -65,7 +65,7 @@ importers:
         version: 7.21.6
       '@slicemachine/adapter-nuxt':
         specifier: ^0.3.95
-        version: 0.3.95(@prismicio/types@0.2.9)(nuxt@4.2.2(@parcel/watcher@2.5.1)(@types/node@25.0.3)(@vue/compiler-sfc@3.5.28)(cac@6.7.14)(db0@0.3.4)(eslint@9.39.2(jiti@2.6.1))(ioredis@5.8.2)(lightningcss@1.31.1)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.54.0)(terser@5.44.1)(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2))(yaml@2.8.2))
+        version: 0.3.95(nuxt@4.2.2(@parcel/watcher@2.5.1)(@types/node@25.0.3)(@vue/compiler-sfc@3.5.28)(cac@6.7.14)(db0@0.3.4)(eslint@9.39.2(jiti@2.6.1))(ioredis@5.8.2)(lightningcss@1.31.1)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.54.0)(terser@5.44.1)(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2))(yaml@2.8.2))
       concurrently:
         specifier: ^9.2.1
         version: 9.2.1
@@ -86,7 +86,7 @@ importers:
         version: 4.2.2(@parcel/watcher@2.5.1)(@types/node@25.0.3)(@vue/compiler-sfc@3.5.28)(cac@6.7.14)(db0@0.3.4)(eslint@9.39.2(jiti@2.6.1))(ioredis@5.8.2)(lightningcss@1.31.1)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.54.0)(terser@5.44.1)(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2))(yaml@2.8.2)
       slice-machine-ui:
         specifier: ^2.21.1
-        version: 2.21.1(@prismicio/types@0.2.9)(zod@4.3.6)
+        version: 2.21.1(zod@4.3.6)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -1738,10 +1738,6 @@ packages:
       fp-ts: ^2.11.8
       io-ts: ^2.2.16
       io-ts-types: ^0.5.16
-
-  '@prismicio/types@0.2.9':
-    resolution: {integrity: sha512-1uhHnZTiGeCi+rmO507B8jtnUTCNetdgrC5sfZEw9zsCplfgBELt0+BN1RFsXWLbZbyvR9xzHcrJ87Ykqa8JZA==}
-    engines: {node: '>=12.7.0'}
 
   '@prismicio/vue@6.1.1':
     resolution: {integrity: sha512-edIANTvoadPM2EiUzehdYGv00BTzG16qgYoJAxOHbkiZ4HyctWOP89ia5iW/7rhT8v1WhOnBWTiqODNA6JoTTg==}
@@ -9222,9 +9218,6 @@ snapshots:
       tslib: 2.8.1
       uuid: 9.0.1
 
-  '@prismicio/types@0.2.9':
-    optional: true
-
   '@prismicio/vue@6.1.1(@prismicio/client@7.21.6)(vue@3.5.28(typescript@5.9.3))':
     dependencies:
       '@prismicio/client': 7.21.6
@@ -9506,11 +9499,11 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
-  '@slicemachine/adapter-nuxt@0.3.95(@prismicio/types@0.2.9)(nuxt@4.2.2(@parcel/watcher@2.5.1)(@types/node@25.0.3)(@vue/compiler-sfc@3.5.28)(cac@6.7.14)(db0@0.3.4)(eslint@9.39.2(jiti@2.6.1))(ioredis@5.8.2)(lightningcss@1.31.1)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.54.0)(terser@5.44.1)(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2))(yaml@2.8.2))':
+  '@slicemachine/adapter-nuxt@0.3.95(nuxt@4.2.2(@parcel/watcher@2.5.1)(@types/node@25.0.3)(@vue/compiler-sfc@3.5.28)(cac@6.7.14)(db0@0.3.4)(eslint@9.39.2(jiti@2.6.1))(ioredis@5.8.2)(lightningcss@1.31.1)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.54.0)(terser@5.44.1)(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2))(yaml@2.8.2))':
     dependencies:
       '@prismicio/simulator': 0.1.4
       '@prismicio/types-internal': 3.11.2(fp-ts@2.16.11)(io-ts-types@0.5.19(fp-ts@2.16.11)(io-ts@2.2.22(fp-ts@2.16.11))(monocle-ts@2.3.13(fp-ts@2.16.11))(newtype-ts@0.3.5(fp-ts@2.16.11)(monocle-ts@2.3.13(fp-ts@2.16.11))))(io-ts@2.2.22(fp-ts@2.16.11))
-      '@slicemachine/plugin-kit': 0.4.93(@prismicio/types@0.2.9)
+      '@slicemachine/plugin-kit': 0.4.93
       common-tags: 1.8.2
       fp-ts: 2.16.11
       io-ts: 2.2.22(fp-ts@2.16.11)
@@ -9523,7 +9516,7 @@ snapshots:
     transitivePeerDependencies:
       - '@prismicio/types'
 
-  '@slicemachine/manager@0.27.1(@prismicio/types@0.2.9)(zod@4.3.6)':
+  '@slicemachine/manager@0.27.1(zod@4.3.6)':
     dependencies:
       '@antfu/ni': 0.20.0
       '@anthropic-ai/claude-agent-sdk': 0.1.37(zod@4.3.6)
@@ -9532,7 +9525,7 @@ snapshots:
       '@prismicio/mocks': 2.14.0
       '@prismicio/types-internal': 3.11.2(fp-ts@2.16.11)(io-ts-types@0.5.19(fp-ts@2.16.11)(io-ts@2.2.22(fp-ts@2.16.11))(monocle-ts@2.3.13(fp-ts@2.16.11))(newtype-ts@0.3.5(fp-ts@2.16.11)(monocle-ts@2.3.13(fp-ts@2.16.11))))(io-ts@2.2.22(fp-ts@2.16.11))
       '@segment/analytics-node': 2.3.0
-      '@slicemachine/plugin-kit': 0.4.93(@prismicio/types@0.2.9)
+      '@slicemachine/plugin-kit': 0.4.93
       cookie: 1.1.1
       cors: 2.8.6
       execa: 7.2.0
@@ -9557,7 +9550,7 @@ snapshots:
       - encoding
       - zod
 
-  '@slicemachine/plugin-kit@0.4.93(@prismicio/types@0.2.9)':
+  '@slicemachine/plugin-kit@0.4.93':
     dependencies:
       '@prismicio/client': 7.17.0
       common-tags: 1.8.2
@@ -9569,7 +9562,7 @@ snapshots:
       io-ts-reporters: 2.0.1(fp-ts@2.16.11)(io-ts@2.2.22(fp-ts@2.16.11))
       p-limit: 4.0.0
       prettier: 3.8.1
-      prismic-ts-codegen: 0.1.27(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)
+      prismic-ts-codegen: 0.1.27(@prismicio/client@7.17.0)
     transitivePeerDependencies:
       - '@prismicio/types'
 
@@ -10364,7 +10357,7 @@ snapshots:
       '@babel/types': 7.28.5
       '@vue/babel-helper-vue-transform-on': 2.0.1
       '@vue/babel-plugin-resolve-type': 2.0.1(@babel/core@7.28.5)
-      '@vue/shared': 3.5.26
+      '@vue/shared': 3.5.28
     optionalDependencies:
       '@babel/core': 7.28.5
     transitivePeerDependencies:
@@ -10472,8 +10465,8 @@ snapshots:
   '@vue/language-core@3.2.1':
     dependencies:
       '@volar/language-core': 2.4.27
-      '@vue/compiler-dom': 3.5.26
-      '@vue/shared': 3.5.26
+      '@vue/compiler-dom': 3.5.28
+      '@vue/shared': 3.5.28
       alien-signals: 3.1.2
       muggle-string: 0.4.1
       path-browserify: 1.0.1
@@ -14154,7 +14147,7 @@ snapshots:
     dependencies:
       parse-ms: 4.0.0
 
-  prismic-ts-codegen@0.1.27(@prismicio/client@7.17.0)(@prismicio/types@0.2.9):
+  prismic-ts-codegen@0.1.27(@prismicio/client@7.17.0):
     dependencies:
       '@prismicio/custom-types-client': 1.3.1(@prismicio/client@7.17.0)
       common-tags: 1.8.2
@@ -14167,7 +14160,6 @@ snapshots:
       quick-lru: 6.1.2
     optionalDependencies:
       '@prismicio/client': 7.17.0
-      '@prismicio/types': 0.2.9
 
   process-nextick-args@2.0.1: {}
 
@@ -14732,10 +14724,10 @@ snapshots:
       ansi-styles: 6.2.3
       is-fullwidth-code-point: 5.1.0
 
-  slice-machine-ui@2.21.1(@prismicio/types@0.2.9)(zod@4.3.6):
+  slice-machine-ui@2.21.1(zod@4.3.6):
     dependencies:
-      '@slicemachine/manager': 0.27.1(@prismicio/types@0.2.9)(zod@4.3.6)
-      start-slicemachine: 0.12.73(@prismicio/types@0.2.9)(zod@4.3.6)
+      '@slicemachine/manager': 0.27.1(zod@4.3.6)
+      start-slicemachine: 0.12.73(zod@4.3.6)
     transitivePeerDependencies:
       - '@prismicio/types'
       - '@types/express'
@@ -14792,11 +14784,11 @@ snapshots:
       '@stablelib/base64': 1.0.1
       fast-sha256: 1.3.0
 
-  start-slicemachine@0.12.73(@prismicio/types@0.2.9)(zod@4.3.6):
+  start-slicemachine@0.12.73(zod@4.3.6):
     dependencies:
       '@prismicio/mocks': 2.14.0
       '@prismicio/types-internal': 3.11.2(fp-ts@2.16.11)(io-ts-types@0.5.19(fp-ts@2.16.11)(io-ts@2.2.22(fp-ts@2.16.11))(monocle-ts@2.3.13(fp-ts@2.16.11))(newtype-ts@0.3.5(fp-ts@2.16.11)(monocle-ts@2.3.13(fp-ts@2.16.11))))(io-ts@2.2.22(fp-ts@2.16.11))
-      '@slicemachine/manager': 0.27.1(@prismicio/types@0.2.9)(zod@4.3.6)
+      '@slicemachine/manager': 0.27.1(zod@4.3.6)
       body-parser: 1.20.4
       chalk: 4.1.2
       cors: 2.8.6
