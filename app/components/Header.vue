@@ -37,7 +37,7 @@ const navigationItems = computed<NavigationMenuItem[]>(() => {
     .map(item => ({
       label: item.text || "Link",
       to: asLink(item) || "#",
-      active: activeSection.value !== null ? `#${activeSection.value}` === asLink(item) : route.path === asLink(item),
+      active: activeSection.value !== null ? asLink(item)?.endsWith(`#${activeSection.value}`) ?? false : route.path === asLink(item),
       // Home link (to="/") is a no-op when already on "/" — force scroll to top instead
       ...(asLink(item) === "/" ? { onSelect: scrollToTop } : {}),
       ...(
