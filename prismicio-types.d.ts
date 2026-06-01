@@ -74,7 +74,7 @@ type PageDocumentDataSlicesSlice =
   | MethodologieSlice
   | ExpertiseSlice
   | RichTextSlice
-  | AtelierSlice
+  | AProposSlice
   | TemoignagesSlice
   | ProblemesSlice
   | PourquoiLuminaSlice
@@ -93,7 +93,7 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>; /**
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
    * Meta Title field in *Page*
    *
    * - **Field Type**: Text
@@ -101,7 +101,7 @@ interface PageDocumentData {
    * - **API ID Path**: page.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
-   */
+   */;
   meta_title: prismic.KeyTextField;
 
   /**
@@ -231,7 +231,7 @@ interface SettingsDocumentData {
     unknown,
     prismic.FieldState,
     never
-  >; /**
+  > /**
    * Footer Primary Text field in *Settings*
    *
    * - **Field Type**: Rich Text
@@ -239,7 +239,7 @@ interface SettingsDocumentData {
    * - **API ID Path**: settings.footer_primary_text
    * - **Tab**: Footer
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
+   */;
   footer_primary_text: prismic.RichTextField;
 
   /**
@@ -286,6 +286,152 @@ export type SettingsDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = PageDocument | SettingsDocument;
+
+/**
+ * Item in *APropos → Default → Primary → Convictions*
+ */
+export interface AProposSliceDefaultPrimaryItemsItem {
+  /**
+   * Title field in *APropos → Default → Primary → Convictions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: a_propos.default.primary.items[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Body field in *APropos → Default → Primary → Convictions*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: a_propos.default.primary.items[].body
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  body: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *APropos → Default → Primary*
+ */
+export interface AProposSliceDefaultPrimary {
+  /**
+   * Eyebrow field in *APropos → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: À propos
+   * - **API ID Path**: a_propos.default.primary.eyebrow
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  eyebrow: prismic.KeyTextField;
+
+  /**
+   * Heading field in *APropos → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: a_propos.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Intro field in *APropos → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: a_propos.default.primary.intro
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  intro: prismic.RichTextField;
+
+  /**
+   * Story Label field in *APropos → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Notre histoire
+   * - **API ID Path**: a_propos.default.primary.story_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  story_label: prismic.KeyTextField;
+
+  /**
+   * Story field in *APropos → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: a_propos.default.primary.story
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  story: prismic.RichTextField;
+
+  /**
+   * Convictions field in *APropos → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: a_propos.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  items: prismic.GroupField<Simplify<AProposSliceDefaultPrimaryItemsItem>>;
+
+  /**
+   * Closing Text field in *APropos → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: a_propos.default.primary.closing_text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  closing_text: prismic.RichTextField;
+
+  /**
+   * CTA Link field in *APropos → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: a_propos.default.primary.cta_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  cta_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Default variation for APropos Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type AProposSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AProposSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *APropos*
+ */
+type AProposSliceVariation = AProposSliceDefault;
+
+/**
+ * APropos Shared Slice
+ *
+ * - **API ID**: `a_propos`
+ * - **Description**: About page — reassurance for e-commerce brand founders
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type AProposSlice = prismic.SharedSlice<
+  "a_propos",
+  AProposSliceVariation
+>;
 
 /**
  * Item in *Atelier → Default → Primary → Principles*
@@ -1279,6 +1425,11 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocumentDataFooterSocialLinksItem,
       AllDocumentTypes,
+      AProposSlice,
+      AProposSliceDefaultPrimaryItemsItem,
+      AProposSliceDefaultPrimary,
+      AProposSliceVariation,
+      AProposSliceDefault,
       AtelierSlice,
       AtelierSliceDefaultPrimaryItemsItem,
       AtelierSliceDefaultPrimary,

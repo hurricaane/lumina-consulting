@@ -4,7 +4,7 @@ import type { Easing } from "motion-v";
 import { motion } from "motion-v";
 
 useSeoMeta({
-  title: "Contact — Lumina Consulting · Sites e-commerce sur mesure",
+  title: "Contact · Lumina Consulting",
   description: "Réservez un appel découverte de 30 minutes pour discuter de votre site e-commerce. Gratuit et sans engagement.",
 });
 

@@ -5,9 +5,23 @@ import type { Easing } from "motion-v";
 import { isFilled } from "@prismicio/client";
 import { motion } from "motion-v";
 
-defineProps(getSliceComponentProps<Content.AProposSlice>());
+const props = defineProps(getSliceComponentProps<Content.AProposSlice>());
 
 const ease: Easing = [0.16, 1, 0.3, 1];
+
+const storyLead = computed(() => {
+  const story = props.slice.primary.story;
+  if (!story || !isFilled.richText(story))
+    return null;
+  return [story[0]];
+});
+
+const storyRest = computed(() => {
+  const story = props.slice.primary.story;
+  if (!story || !isFilled.richText(story) || story.length <= 1)
+    return null;
+  return story.slice(1);
+});
 </script>
 
 <template>
@@ -16,9 +30,15 @@ const ease: Easing = [0.16, 1, 0.3, 1];
     :data-slice-variation="slice.variation"
   >
     <!-- ══ HERO ══════════════════════════════════════════════════════════ -->
-    <section class="pt-[clamp(5rem,10vw,8rem)] pb-[clamp(4rem,8vw,6rem)]">
+    <section class="relative pt-[clamp(5rem,10vw,8rem)] pb-[clamp(4rem,8vw,6rem)] overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div
+          class="absolute top-[-10%] left-[15%] w-[min(700px,90vw)] aspect-square rounded-full bg-[radial-gradient(circle,oklch(0.84_0.09_230/0.10)_0%,transparent_65%)] blur-[80px]"
+        />
+      </div>
+
       <UContainer>
-        <div class="max-w-2xl">
+        <div class="relative z-10 max-w-3xl">
           <!-- Eyebrow -->
           <motion.div
             v-if="isFilled.keyText(slice.primary.eyebrow)"
@@ -81,7 +101,7 @@ const ease: Easing = [0.16, 1, 0.3, 1];
     <!-- ══ STORY ═════════════════════════════════════════════════════════ -->
     <section
       v-if="isFilled.richText(slice.primary.story)"
-      class="py-[clamp(4.5rem,9vw,7rem)] bg-lumina-deep overflow-hidden relative"
+      class="py-[clamp(5rem,10vw,8rem)] bg-lumina-deep overflow-hidden relative"
     >
       <!-- Breathing radial glow -->
       <motion.div
@@ -92,44 +112,68 @@ const ease: Easing = [0.16, 1, 0.3, 1];
       />
 
       <UContainer>
-        <motion.div
-          class="max-w-2xl relative z-10"
-          :initial="{ opacity: 0, y: 24 }"
-          :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.8, ease }"
-          :in-view-options="{ once: true }"
-        >
-          <!-- Section label -->
-          <div
-            v-if="isFilled.keyText(slice.primary.story_label)"
-            class="flex items-center gap-4 mb-10"
-          >
-            <div class="w-8 h-px bg-lumina-300/30 shrink-0" />
-            <span class="text-[0.625rem] font-semibold tracking-[0.22em] uppercase text-lumina-300/60">
-              {{ slice.primary.story_label }}
-            </span>
-          </div>
-
-          <!-- Story prose -->
-          <PrismicRichText
-            :field="slice.primary.story"
-            :components="{
-              paragraph: {
-                class:
-                  'text-[1.0625rem] leading-[1.9] text-white/55 m-0 [&+p]:mt-6',
-              },
-            }"
-          />
-
-          <!-- Accent line -->
+        <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-20 relative z-10">
+          <!-- Left: sticky label + pull quote -->
           <motion.div
-            :initial="{ scaleX: 0 }"
-            :while-in-view="{ scaleX: 1 }"
-            :transition="{ duration: 0.65, delay: 0.35, ease }"
+            class="lg:sticky lg:top-24 lg:self-start"
+            :initial="{ opacity: 0, y: 24 }"
+            :while-in-view="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 0.8, ease }"
             :in-view-options="{ once: true }"
-            class="w-10 h-px bg-lumina-300/40 mt-10 origin-left"
-          />
-        </motion.div>
+          >
+            <!-- Section label -->
+            <div
+              v-if="isFilled.keyText(slice.primary.story_label)"
+              class="flex items-center gap-4 mb-10"
+            >
+              <div class="w-8 h-px bg-lumina-300/30 shrink-0" />
+              <span class="text-[0.625rem] font-semibold tracking-[0.22em] uppercase text-lumina-300/60">
+                {{ slice.primary.story_label }}
+              </span>
+            </div>
+
+            <!-- Lead paragraph as pull quote -->
+            <PrismicRichText
+              v-if="storyLead"
+              :field="storyLead"
+              :components="{
+                paragraph: {
+                  class:
+                    'font-display italic text-[clamp(1.375rem,2.5vw,1.75rem)] leading-[1.45] tracking-[-0.02em] text-white/75 m-0',
+                },
+              }"
+            />
+
+            <!-- Accent line -->
+            <motion.div
+              :initial="{ scaleX: 0 }"
+              :while-in-view="{ scaleX: 1 }"
+              :transition="{ duration: 0.65, delay: 0.35, ease }"
+              :in-view-options="{ once: true }"
+              class="w-10 h-px bg-lumina-300/40 mt-10 origin-left"
+            />
+          </motion.div>
+
+          <!-- Right: remaining prose -->
+          <motion.div
+            v-if="storyRest"
+            :initial="{ opacity: 0, y: 24 }"
+            :while-in-view="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 0.8, delay: 0.15, ease }"
+            :in-view-options="{ once: true }"
+            class="lg:pt-12"
+          >
+            <PrismicRichText
+              :field="storyRest"
+              :components="{
+                paragraph: {
+                  class:
+                    'text-[1.0625rem] leading-[1.9] text-white/55 m-0 [&+p]:mt-6',
+                },
+              }"
+            />
+          </motion.div>
+        </div>
       </UContainer>
     </section>
 
@@ -139,45 +183,47 @@ const ease: Easing = [0.16, 1, 0.3, 1];
       class="py-[clamp(5rem,10vw,8rem)]"
     >
       <UContainer>
-        <div class="max-w-2xl mx-auto">
+        <div class="border-t border-lumina-100 grid grid-cols-1 md:grid-cols-2">
           <motion.div
             v-for="(item, index) in slice.primary.items"
             :key="index"
-            :initial="{ opacity: 0, y: 16 }"
+            :initial="{ opacity: 0, y: 20 }"
             :while-in-view="{ opacity: 1, y: 0 }"
-            :transition="{ duration: 0.6, delay: index * 0.07, ease }"
+            :transition="{ duration: 0.6, delay: index * 0.1, ease }"
             :in-view-options="{ once: true }"
-            class="group flex gap-8 sm:gap-12 py-10 border-b border-lumina-100 first:border-t first:border-lumina-100"
+            class="group py-10 md:py-12 border-b border-lumina-100"
+            :class="{
+              'md:border-r md:pr-10 lg:pr-14': index % 2 === 0,
+              'md:pl-10 lg:pl-14': index % 2 === 1,
+            }"
           >
             <!-- Ghost number -->
             <span
               aria-hidden="true"
-              class="font-display text-[clamp(2.5rem,5vw,4rem)] font-medium leading-none tracking-[-0.04em] text-lumina-200 group-hover:text-lumina-300 tabular-nums select-none shrink-0 transition-colors duration-500 pt-0.5"
+              class="font-display text-[clamp(2.5rem,5vw,3.5rem)] font-medium leading-none tracking-[-0.04em] text-lumina-200 group-hover:text-lumina-300 tabular-nums select-none block mb-6 transition-colors duration-500"
             >
               {{ String(index + 1).padStart(2, "0") }}
             </span>
 
-            <div class="flex-1 min-w-0">
-              <!-- Conviction title -->
-              <h3
-                v-if="isFilled.keyText(item.title)"
-                class="font-display italic text-[clamp(1.25rem,2.5vw,1.625rem)] font-medium tracking-[-0.03em] leading-snug text-lumina-deep mb-4"
-              >
-                {{ item.title }}
-              </h3>
+            <!-- Conviction title -->
+            <h3
+              v-if="isFilled.keyText(item.title)"
+              class="font-display italic text-[clamp(1.25rem,2.5vw,1.625rem)] font-medium tracking-[-0.03em] leading-snug text-lumina-deep mb-4"
+            >
+              {{ item.title }}
+            </h3>
 
-              <!-- Conviction body -->
-              <PrismicRichText
-                v-if="isFilled.richText(item.body)"
-                :field="item.body"
-                :components="{
-                  paragraph: {
-                    class:
-                      'text-[0.9375rem] leading-[1.85] text-lumina-deep/55 m-0 [&+p]:mt-4',
-                  },
-                }"
-              />
-            </div>
+            <!-- Conviction body -->
+            <PrismicRichText
+              v-if="isFilled.richText(item.body)"
+              :field="item.body"
+              :components="{
+                paragraph: {
+                  class:
+                    'text-[0.9375rem] leading-[1.85] text-lumina-deep/55 m-0 [&+p]:mt-4',
+                },
+              }"
+            />
           </motion.div>
         </div>
       </UContainer>

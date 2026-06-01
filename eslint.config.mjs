@@ -45,7 +45,7 @@ export default withNuxt(
               camelCase: true,
               pascalCase: true,
             },
-            ignore: ["README.md", "CLAUDE.md"],
+            ignore: ["README.md", "CLAUDE.md", "DESIGN.md", "PRODUCT.md"],
           },
         ],
       },

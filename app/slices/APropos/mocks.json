@@ -5,8 +5,8 @@
     "primary": {
       "eyebrow": {
         "__TYPE__": "FieldContent",
-        "type": "Text",
-        "value": "À propos"
+        "value": "À propos",
+        "type": "Text"
       },
       "heading": {
         "__TYPE__": "StructuredTextContent",
@@ -14,10 +14,8 @@
           {
             "type": "heading2",
             "content": {
-              "text": "Votre marque mérite mieux qu'un site générique.",
-              "spans": []
-            },
-            "direction": "ltr"
+              "text": "Votre marque mérite mieux qu'un site générique."
+            }
           }
         ]
       },
@@ -27,25 +25,21 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Les marques e-commerce investissent dans leur produit, leur branding, leur communauté. Mais quand un client arrive sur leur site, il ne retrouve rien de ce qui les rend uniques.",
-              "spans": []
-            },
-            "direction": "ltr"
+              "text": "Les marques e-commerce investissent dans leur produit, leur branding, leur communauté. Mais quand un client arrive sur leur site, il ne retrouve rien de ce qui les rend uniques."
+            }
           },
           {
             "type": "paragraph",
             "content": {
-              "text": "Lumina existe pour changer ça. Nous concevons des sites e-commerce qui reflètent vraiment votre marque — rapides, fiables, et pensés pour convertir.",
-              "spans": []
-            },
-            "direction": "ltr"
+              "text": "Lumina existe pour changer ça. Nous concevons des sites e-commerce qui reflètent vraiment votre marque : rapides, fiables, et pensés pour convertir."
+            }
           }
         ]
       },
       "story_label": {
         "__TYPE__": "FieldContent",
-        "type": "Text",
-        "value": "Notre histoire"
+        "value": "Notre histoire",
+        "type": "Text"
       },
       "story": {
         "__TYPE__": "StructuredTextContent",
@@ -53,34 +47,26 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Lumina est né d'un constat simple : trop de marques ambitieuses sont freinées par des sites qui ne leur ressemblent pas.",
-              "spans": []
-            },
-            "direction": "ltr"
+              "text": "Lumina est né d'un constat simple : trop de marques ambitieuses sont freinées par des sites qui ne leur ressemblent pas."
+            }
           },
           {
             "type": "paragraph",
             "content": {
-              "text": "Avant de créer Lumina, nous venions d'un monde où la moindre erreur a des conséquences — celui des systèmes critiques et de la fiabilité technique. Des années passées à construire des infrastructures où les pannes ne sont pas une option.",
-              "spans": []
-            },
-            "direction": "ltr"
+              "text": "Avant de créer Lumina, nous venions d'un monde où la moindre erreur a des conséquences : celui des systèmes critiques et de la fiabilité technique. Des années passées à construire des infrastructures où les pannes ne sont pas une option."
+            }
           },
           {
             "type": "paragraph",
             "content": {
-              "text": "En découvrant l'univers des marques e-commerce, le contraste était frappant : des entrepreneurs investis, des produits remarquables, mais des sites livrés à la hâte par des prestataires qui disparaissent après la mise en ligne.",
-              "spans": []
-            },
-            "direction": "ltr"
+              "text": "En découvrant l'univers des marques e-commerce, le contraste était frappant : des entrepreneurs investis, des produits remarquables, mais des sites livrés à la hâte par des prestataires qui disparaissent après la mise en ligne."
+            }
           },
           {
             "type": "paragraph",
             "content": {
-              "text": "Lumina est la réponse à ce problème. Un studio qui apporte la même rigueur et le même souci du détail à votre site e-commerce qu'à une infrastructure critique — parce que pour votre marque, c'en est une.",
-              "spans": []
-            },
-            "direction": "ltr"
+              "text": "Lumina est la réponse à ce problème. Un studio qui apporte la même rigueur et le même souci du détail à votre site e-commerce qu'à une infrastructure critique. Parce que pour votre marque, c'en est une."
+            }
           }
         ]
       },
@@ -89,13 +75,14 @@
         "value": [
           {
             "__TYPE__": "GroupItemContent",
+            "key": "a1b2c3d4-e5f6-4890-abcd-ef1234567890",
             "value": [
               [
                 "title",
                 {
                   "__TYPE__": "FieldContent",
-                  "type": "Text",
-                  "value": "Votre site est votre meilleur commercial"
+                  "value": "Votre site est votre meilleur commercial",
+                  "type": "Text"
                 }
               ],
               [
@@ -106,10 +93,8 @@
                     {
                       "type": "paragraph",
                       "content": {
-                        "text": "Il accueille vos clients 24h/24. Il crée la première impression. Il transforme un visiteur curieux en acheteur convaincu. Votre site mérite autant d'attention et d'investissement que votre produit.",
-                        "spans": []
-                      },
-                      "direction": "ltr"
+                        "text": "Il accueille vos clients 24h/24. Il crée la première impression. Il transforme un visiteur curieux en acheteur convaincu. Votre site mérite autant d'attention et d'investissement que votre produit."
+                      }
                     }
                   ]
                 }
@@ -118,13 +103,14 @@
           },
           {
             "__TYPE__": "GroupItemContent",
+            "key": "b2c3d4e5-f6a7-4901-bcde-f12345678901",
             "value": [
               [
                 "title",
                 {
                   "__TYPE__": "FieldContent",
-                  "type": "Text",
-                  "value": "La vitesse n'est pas un détail technique"
+                  "value": "La vitesse n'est pas un détail technique",
+                  "type": "Text"
                 }
               ],
               [
@@ -135,10 +121,8 @@
                     {
                       "type": "paragraph",
                       "content": {
-                        "text": "C'est la première chose que vos visiteurs ressentent. Un site rapide inspire confiance. Un site lent fait fuir — et chaque seconde de chargement en trop vous coûte des ventes que vous ne verrez jamais.",
-                        "spans": []
-                      },
-                      "direction": "ltr"
+                        "text": "C'est la première chose que vos visiteurs ressentent. Un site rapide inspire confiance. Un site lent fait fuir, et chaque seconde de chargement en trop vous coûte des ventes que vous ne verrez jamais."
+                      }
                     }
                   ]
                 }
@@ -147,13 +131,14 @@
           },
           {
             "__TYPE__": "GroupItemContent",
+            "key": "c3d4e5f6-a7b8-4012-cdef-123456789012",
             "value": [
               [
                 "title",
                 {
                   "__TYPE__": "FieldContent",
-                  "type": "Text",
-                  "value": "Un site ne devrait jamais être abandonné"
+                  "value": "Un site ne devrait jamais être abandonné",
+                  "type": "Text"
                 }
               ],
               [
@@ -164,10 +149,8 @@
                     {
                       "type": "paragraph",
                       "content": {
-                        "text": "La mise en ligne n'est pas la fin du projet — c'est le début de l'accompagnement. Surveillance continue, mises à jour, optimisations. Votre site évolue avec votre marque, pas contre elle.",
-                        "spans": []
-                      },
-                      "direction": "ltr"
+                        "text": "La mise en ligne n'est pas la fin du projet : c'est le début de l'accompagnement. Surveillance continue, mises à jour, optimisations. Votre site évolue avec votre marque, pas contre elle."
+                      }
                     }
                   ]
                 }
@@ -176,13 +159,14 @@
           },
           {
             "__TYPE__": "GroupItemContent",
+            "key": "d4e5f6a7-b8c9-4123-def0-234567890123",
             "value": [
               [
                 "title",
                 {
                   "__TYPE__": "FieldContent",
-                  "type": "Text",
-                  "value": "Sur mesure ne veut pas dire sur-compliqué"
+                  "value": "Sur mesure ne veut pas dire sur-compliqué",
+                  "type": "Text"
                 }
               ],
               [
@@ -193,10 +177,8 @@
                     {
                       "type": "paragraph",
                       "content": {
-                        "text": "Un site construit pour vous, mais que vous pouvez gérer en toute autonomie. Des pages que vous modifiez vous-même, un back-office clair, zéro dépendance technique pour le quotidien.",
-                        "spans": []
-                      },
-                      "direction": "ltr"
+                        "text": "Un site construit pour vous, mais que vous pouvez gérer en toute autonomie. Des pages que vous modifiez vous-même, un back-office clair, zéro dépendance technique pour le quotidien."
+                      }
                     }
                   ]
                 }
@@ -211,20 +193,17 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Vous avez un projet e-commerce en tête ?",
-              "spans": []
-            },
-            "direction": "ltr"
+              "text": "Vous avez un projet e-commerce en tête ?"
+            }
           }
         ]
       },
       "cta_link": {
-        "key": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
         "__TYPE__": "LinkContent",
+        "key": "bdd0fa2a-38eb-478c-ba76-1edc9b3be8b3",
         "value": {
           "__TYPE__": "ExternalLink",
           "url": "/contact",
-          "target": "",
           "text": "Discutons de votre projet"
         }
       }
