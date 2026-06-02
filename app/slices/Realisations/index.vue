@@ -147,6 +147,7 @@ const layout = computed(() => {
             <PrismicImage
               v-if="isFilled.image(items[0].image)"
               :field="items[0].image"
+              :fallback-alt="items[0].title || 'Réalisation'"
               class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-700 ease-out"
             />
             <div v-else class="absolute inset-0 bg-lumina-100" />
@@ -201,6 +202,7 @@ const layout = computed(() => {
               <PrismicImage
                 v-if="isFilled.image(items[0].image)"
                 :field="items[0].image"
+                :fallback-alt="items[0].title || 'Réalisation'"
                 class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-700 ease-out"
               />
               <div v-else class="absolute inset-0 bg-lumina-100" />
@@ -258,6 +260,7 @@ const layout = computed(() => {
                 <PrismicImage
                   v-if="isFilled.image(item.image)"
                   :field="item.image"
+                  :fallback-alt="item.title || 'Réalisation'"
                   class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-700 ease-out"
                 />
                 <div v-else class="absolute inset-0 bg-lumina-100" />

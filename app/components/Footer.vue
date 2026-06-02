@@ -55,7 +55,7 @@ const socialLinks = computed(() => {
           <div class="flex items-center gap-2.5">
             <NuxtImg
               src="/images/logo.webp"
-              alt=""
+              alt="Lumina Consulting"
               :width="36"
               :height="36"
               quality="90"

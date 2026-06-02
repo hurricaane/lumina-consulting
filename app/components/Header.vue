@@ -100,7 +100,7 @@ const lineVariants: MotionProps["variants"] = {
           <motion.div :variants="logoVariants" class="size-12 shrink-0 flex items-center justify-center">
             <NuxtImg
               src="/images/logo.webp"
-              alt=""
+              alt="Lumina Consulting"
               :width="48"
               :height="48"
               class="size-12 object-contain"

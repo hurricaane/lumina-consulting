@@ -23,8 +23,8 @@ useSeoMeta({
 useSchemaOrg([
   defineOrganization({
     name: "Lumina Consulting",
-    url: "https://luminaconsulting.fr",
-    logo: "https://luminaconsulting.fr/images/logo.webp",
+    url: "https://www.luminaconsulting.fr",
+    logo: "https://www.luminaconsulting.fr/images/logo.webp",
   }),
   defineWebSite({
     name: "Lumina Consulting",

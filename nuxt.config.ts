@@ -16,6 +16,7 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: "fr" },
       meta: [{ charset: "utf-8" }],
       link: [
+        { rel: "preconnect", href: "https://images.prismic.io", crossorigin: "" },
         { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon-96x96.png" },
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -80,7 +81,8 @@ export default defineNuxtConfig({
 
   site: {
     name: "Lumina Consulting",
-    url: "https://luminaconsulting.fr",
+    url: "https://www.luminaconsulting.fr",
+    defaultLocale: "fr",
     separator: "·",
   },
 

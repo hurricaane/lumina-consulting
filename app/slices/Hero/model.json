@@ -33,7 +33,7 @@
             "label": "Title Second Line",
             "placeholder": "",
             "allowTargetBlank": false,
-            "single": "heading1"
+            "single": "heading2"
           }
         },
         "text": {
