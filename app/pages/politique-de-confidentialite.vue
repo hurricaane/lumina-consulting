@@ -4,8 +4,10 @@ import type { Easing } from "motion-v";
 import { motion } from "motion-v";
 
 useSeoMeta({
-  title: "Politique de confidentialité — Lumina Consulting",
+  title: "Politique de confidentialité",
+  ogTitle: "Politique de confidentialité",
   description: "Politique de confidentialité du site Lumina Consulting, studio numérique.",
+  ogDescription: "Politique de confidentialité du site Lumina Consulting, studio numérique.",
 });
 
 const ease: Easing = [0.16, 1, 0.3, 1];

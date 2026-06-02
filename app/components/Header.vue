@@ -99,12 +99,10 @@ const lineVariants: MotionProps["variants"] = {
         >
           <motion.div :variants="logoVariants" class="size-12 shrink-0 flex items-center justify-center">
             <NuxtImg
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt=""
               :width="48"
               :height="48"
-              format="webp"
-              quality="90"
               class="size-12 object-contain"
             />
           </motion.div>

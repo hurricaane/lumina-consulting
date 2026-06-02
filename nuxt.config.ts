@@ -13,10 +13,15 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Lumina Consulting",
-      titleTemplate: "%s",
       htmlAttrs: { lang: "fr" },
       meta: [{ charset: "utf-8" }],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [
+        { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon-96x96.png" },
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+        { rel: "manifest", href: "/site.webmanifest" },
+      ],
     },
   },
 
@@ -76,5 +81,11 @@ export default defineNuxtConfig({
   site: {
     name: "Lumina Consulting",
     url: "https://luminaconsulting.fr",
+    separator: "·",
+  },
+
+  sitemap: {
+    sources: ["/api/__sitemap__/prismic"],
+    exclude: ["/slice-simulator", "/api/preview"],
   },
 });

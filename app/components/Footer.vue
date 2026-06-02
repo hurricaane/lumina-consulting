@@ -54,11 +54,10 @@ const socialLinks = computed(() => {
           <!-- Logo -->
           <div class="flex items-center gap-2.5">
             <NuxtImg
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt=""
               :width="36"
               :height="36"
-              format="webp"
               quality="90"
               class="size-9 object-contain shrink-0"
             />

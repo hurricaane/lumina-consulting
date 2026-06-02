@@ -4,8 +4,10 @@ import type { Easing } from "motion-v";
 import { motion } from "motion-v";
 
 useSeoMeta({
-  title: "Laisser un avis — Lumina Consulting",
+  title: "Laisser un avis",
+  ogTitle: "Laisser un avis",
   description: "Partagez votre expérience avec Lumina Consulting.",
+  ogDescription: "Partagez votre expérience avec Lumina Consulting.",
 });
 
 const ease: Easing = [0.16, 1, 0.3, 1];

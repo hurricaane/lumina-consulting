@@ -4,8 +4,10 @@ import type { Easing } from "motion-v";
 import { motion } from "motion-v";
 
 useSeoMeta({
-  title: "Contact · Lumina Consulting",
+  title: "Contact",
+  ogTitle: "Contact",
   description: "Réservez un appel découverte de 30 minutes pour discuter de votre site e-commerce. Gratuit et sans engagement.",
+  ogDescription: "Réservez un appel découverte de 30 minutes pour discuter de votre site e-commerce. Gratuit et sans engagement.",
 });
 
 const ease: Easing = [0.16, 1, 0.3, 1];

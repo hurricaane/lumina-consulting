@@ -70,7 +70,7 @@ const ease: Easing = [0.16, 1, 0.3, 1];
           v-if="isFilled.richText(slice.primary.title_second_line)"
           :field="slice.primary.title_second_line"
           :components="{
-            heading2: {
+            heading1: {
               class:
                 'font-display text-[clamp(2.625rem,6.5vw,5.25rem)] font-semibold italic tracking-[-0.03em] leading-[1.1] m-0 bg-gradient-to-br from-[oklch(0.84_0.09_230)] to-[oklch(0.70_0.12_178)] bg-clip-text text-transparent',
             },

@@ -4,6 +4,10 @@ import { components } from "~/slices";
 definePageMeta({
   layout: "blank",
 });
+
+useSeoMeta({
+  robots: "noindex, nofollow",
+});
 </script>
 
 <template>

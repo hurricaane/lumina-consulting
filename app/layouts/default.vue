@@ -12,7 +12,25 @@ useSeoMeta({
   description: settings.value?.data.meta_description,
   ogDescription: settings.value?.data.meta_description,
   ogImage: () => asImageSrc(settings.value?.data.meta_image),
+  ogType: "website",
+  ogLocale: "fr_FR",
+  twitterCard: "summary_large_image",
+  twitterTitle: settings.value?.data.site_title,
+  twitterDescription: settings.value?.data.meta_description,
+  twitterImage: () => asImageSrc(settings.value?.data.meta_image),
 });
+
+useSchemaOrg([
+  defineOrganization({
+    name: "Lumina Consulting",
+    url: "https://luminaconsulting.fr",
+    logo: "https://luminaconsulting.fr/images/logo.webp",
+  }),
+  defineWebSite({
+    name: "Lumina Consulting",
+  }),
+  defineWebPage(),
+]);
 </script>
 
 <template>

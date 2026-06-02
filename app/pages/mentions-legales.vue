@@ -4,8 +4,10 @@ import type { Easing } from "motion-v";
 import { motion } from "motion-v";
 
 useSeoMeta({
-  title: "Mentions légales — Lumina Consulting",
+  title: "Mentions légales",
+  ogTitle: "Mentions légales",
   description: "Mentions légales du site Lumina Consulting, studio numérique.",
+  ogDescription: "Mentions légales du site Lumina Consulting, studio numérique.",
 });
 
 const ease: Easing = [0.16, 1, 0.3, 1];

@@ -4,8 +4,10 @@ import type { Easing } from "motion-v";
 import { motion } from "motion-v";
 
 useSeoMeta({
-  title: "Conditions générales de vente — Lumina Consulting",
+  title: "Conditions générales de vente",
+  ogTitle: "Conditions générales de vente",
   description: "Conditions générales de vente de Lumina Consulting, studio de création de sites web sur mesure.",
+  ogDescription: "Conditions générales de vente de Lumina Consulting, studio de création de sites web sur mesure.",
 });
 
 const ease: Easing = [0.16, 1, 0.3, 1];
