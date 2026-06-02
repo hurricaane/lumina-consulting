@@ -45,6 +45,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "nuxt": "^4.2.2",
+    "sharp": "^0.34.5",
     "slice-machine-ui": "^2.21.1",
     "typescript": "^5.9.3"
   },

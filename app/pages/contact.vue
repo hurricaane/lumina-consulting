@@ -123,7 +123,7 @@ async function submit() {
               :transition="{ duration: 0.55, delay: 0.44, ease }"
               class="text-[0.9375rem] leading-[1.8] text-white/45 max-w-[340px]"
             >
-              Partagez votre vision, vos enjeux, vos ambitions. En 30 minutes, nous posons ensemble les bases de votre futur site.
+              Votre vision, vos enjeux, vos ambitions. En 30 minutes, on pose les bases ensemble.
             </motion.p>
           </div>
 
